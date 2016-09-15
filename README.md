@@ -10,7 +10,7 @@ Software you need to install first:
  * [Jekyll](https://jekyllrb.com/)
  * [NodeJS](https://nodejs.org/en/)
 
-Now clone this repo: 'git clone https://github.com/esri-es/desarrolladores.esri.es.git && cd desarrolladores.esri.es' and then run: `rvm use 2.0.0`
+Now clone this repo: `git clone https://github.com/esri-es/desarrolladores.esri.es.git && cd desarrolladores.esri.es` and then run: `rvm use 2.0.0`
 
 Then you will be ready to install all the dependencies running:
 ```
