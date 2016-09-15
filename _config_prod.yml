@@ -1,0 +1,13 @@
+baseurl: "/upcoming" # the subpath of your site, e.g. /blog
+url: "http://desarrolladores.esri.es" # the base hostname & protocol for your site
+#baseurl: ""
+#url: "http://localhost:9091"
+twitter_username: esri_spain
+github_username:  esri-es
+
+# Build settings
+markdown: kramdown
+
+sass:
+    sass_dir: /node_modules
+    style: compressed

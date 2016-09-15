@@ -1,0 +1,46 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>{{page.title}} - Esri España</title>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!--[if IE]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="{{ site.baseurl | prepend:site.url }}/css/main.css">
+  <script src="{{ site.baseurl | prepend:site.url }}/node_modules/calcite-web/dist/js/calcite-web.min.js"></script>
+  <base href="{{ site.baseurl | prepend:site.url }}">
+
+
+  <script>
+  window.onload = function () {calcite.init();};
+  </script>
+
+</head>
+
+<body>
+  {% include menu.html %}
+
+    {{content}}
+
+  {% include tos-banner.html %}
+  {% include footer.html %}
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="{{ site.baseurl | prepend:site.url }}/js/common.js"></script>
+</body>
+</html>

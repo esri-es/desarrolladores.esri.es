@@ -1,0 +1,30 @@
+<!--js-sticky-->
+<div class="third-nav" data-top="0">
+  <div class="grid-container">
+    <div class="column-24 phone-6">
+      <!-- desktop sized navigation -->
+      <div class="tablet-hide">
+        <!-- logo / home -->
+        <a href="/" class="top-nav-title">Desarrolladores ArcGIS</a>
+
+        <!-- user specific dropdowns -->
+        <nav class="top-nav-list right" role="navigation" aria-labelledby="usernav">
+          <!--
+          {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+					{% for p in navigation_pages %}
+						{% if p.navigation_weight %}
+
+  						<a href="{{ p.url }}" class="top-nav-link {% if p.url == page.url %}is-active{% endif %}">
+  							{{ p.title }}
+  						</a>
+
+						{% endif %}
+					{% endfor %}
+          <a class="top-nav-link" href="/">Blog</a>
+          -->
+        </nav>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$image-path:      '{{ site.baseurl | prepend:site.url }}/node_modules/calcite-web/dist/img';
+$font-path:       '{{ site.baseurl | prepend:site.url }}/node_modules/calcite-web/dist/fonts';
+
+@import "calcite-web/dist/sass/calcite-web-no-fonts.scss";
+
+/**********************
+    Generic classes
+***********************/
+.img-circle {
+    border-radius: 50%;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.invisible{
+  visibility: hidden;
+}
+
+/**********************
+        Header
+***********************/
+.mt-75{
+  margin-top: .75rem;
+}
+
+/**********************
+        Footer
+***********************/
+#tos{
+  position: fixed;
+  bottom: 0;
+  max-width: 100%;
+  font-size: .8rem;
+  width: 100%;
+  opacity: 0;
+  display: none;
+  .icon-ui-close{
+    cursor: pointer;
+  }
+  box-sizing: border-box;
+}
+
+/**********************
+        MOOCS
+***********************/
+#banner{
+  background: url('{{ site.baseurl | prepend:site.url }}/images/moocs/MOOC_Banner.jpg') top center;
+  background-size: cover !important;
+  color: white;
+  h1{
+    margin: 0;
+  }
+  .breadcrumbs a{color:white}
+}
+
+#mooc-content{
+  td{
+    &:first-child{
+      width: 4rem;
+    }
+    &:nth-child(2){
+      width: 7rem;
+    }
+  }
+}
+#enrollCourse{
+  background-color: rgba(0,0,0,.5);
+  text-transform: uppercase;
+  &:hover {
+      background-color: rgba(0,0,0,.8);
+      color: white;
+  }
+
+  @include transition-prefixed(background .5s ease-out);
+}

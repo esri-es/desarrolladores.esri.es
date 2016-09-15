@@ -1,0 +1,17 @@
+{
+  "name": "Desarrolladores Esri",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raul Jimenez <raul.jimenez@esri.es>",
+  "license": {
+    "type" : "Apache-2.0",
+    "url" : "http://opensource.org/licenses/apache2.0.php"
+  },
+  "devDependencies": {
+    "calcite-web": "github:esri/calcite-web#v1.0.0-beta.30"
+  }
+}
