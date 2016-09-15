@@ -16,7 +16,7 @@ npm install
 bundle install
 ```
 
-## Development mode:
+## Development mode
 
 Now you should be ready to preview you site running `jekyll serve`, but I
 strongly recommend you to develop with livereload enabled:
