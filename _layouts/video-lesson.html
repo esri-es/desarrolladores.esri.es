@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>{{page.title}} - Esri España</title>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!--[if IE]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="{{ site.baseurl | prepend:site.url }}/css/main.css">
+  <script src="{{ site.baseurl | prepend:site.url }}/node_modules/calcite-web/dist/js/calcite-web.js"></script>
+
+
+  <script>
+  window.onload = function () {calcite.init();};
+  </script>
+
+</head>
+
+<body>
+
+  <div class="drawer drawer-right js-drawer" data-drawer="side-nav" tabindex="0">
+    <nav class="drawer-nav" role="navigation">
+      <aside class="side-nav">
+
+
+        {% for m in site.data.index-plataforma-arcgis.modulos %}
+          <h2 class="side-nav-title">Módulo {{forloop.index}}</h2>
+          {% for l in m %}
+            <a href="{{l[0]}}" class="side-nav-link
+            {% if page.url contains l[0] %}
+            is-active
+            {% endif %}
+            ">{{l[1]}}</a>
+          {% endfor %}
+        {% endfor %}
+        <!--<a href="/" class="side-nav-link">Objetivos del curso</a>
+        <a href="/" class="side-nav-link">Cuenta de organizacion</a>
+        <a href="/" class="side-nav-link">Documentación</a>
+        <a href="/" class="side-nav-link">Comunidad ArcGIS</a>-->
+        <h2 class="side-nav-title">Módulo 2</h2>
+        <a href="/" class="side-nav-link">Introducción a los web maps & scenes</a>
+        <a href="/" class="side-nav-link">Components</a>
+        <a href="/" class="side-nav-link">Patterns</a>
+        <a href="/" class="side-nav-link">Sass</a>
+        <a href="/" class="side-nav-link">JavaScript</a>
+        <a href="/" class="side-nav-link">Layouts</a>
+      </aside>
+    </nav>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <div class="wrapper">
+    {% include menu.html submenu="lessons.html" %}
+
+    {% include video-player.html lesson=page.lesson %}
+
+    {% include tos-banner.html %}
+    {% include footer.html %}
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="{{ site.baseurl | prepend:site.url }}/js/common.js"></script>
+</body>
+</html>

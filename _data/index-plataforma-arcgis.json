@@ -1,0 +1,10 @@
+{
+  "modulos":[
+    {
+      "objetivos": "Objetivos del curso",
+      "cuenta-de-organizacion": "Cuenta de organizacion",
+      "documentacion": "Documentación",
+      "comunidad-arcgis": "Comunidad ArcGIS"
+    },
+  ]
+}

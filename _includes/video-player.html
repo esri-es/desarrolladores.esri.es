@@ -1,0 +1,92 @@
+<!--<h2>video-player.html</h2>
+Title: {{site.data.video-comunidad-arcgis.title}}<br>
+
+Video id: {{include.lesson}}
+-->
+
+<div class="grid-container leader-1" id="lesson">
+  <div class="column-24">
+    <div class="column-3">
+      <button id="prev">Anterior</button>
+    </div>
+    <div class="column-18">
+      <h1 class="text-center">{{page.title}}</h1>
+    </div>
+    <div class="column-3">
+      <button id="next" class="right">Siguiente</button>
+    </div>
+  </div>
+  <div class="column-24">
+    <div class="column-12">
+      <!--<iframe class="fill" src="https://www.youtube.com/embed/?enablejsapi=1" frameborder="0" allowfullscreen></iframe>-->
+      <div data-video-id="{{site.data[include.lesson].id}}" id="player"></div>
+    </div>
+    <div class="column-12">
+      <table class="table-striped video-index">
+        <thead>
+          <tr>
+            <th>Minuto</th>
+            <th>Tema</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in site.data[include.lesson].index %}
+            {% for j in i %}
+              <tr>
+                <td>{{ j[0] }}</td><td>{{ j[1] }}</td>
+              </tr>
+            {% endfor %}
+          {% endfor %}
+        </tbody>
+    </table>
+    </div>
+  </div>
+  <div class="column-12">
+    <iframe src="{{site.data[include.lesson].slides}}" class="fill" frameborder="0"></iframe>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+var player;
+
+var tag = document.createElement('script');
+
+tag.src = 'http://www.youtube.com/iframe_api';
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+  //console.log('videoId',videoId);
+
+  var videoId = document.getElementById('player').getAttribute('data-video-id');
+  player = new YT.Player('player', {
+    height: '330',
+    width: '100%',
+    videoId: videoId,
+    events: {
+      'onReady': onPlayerReady
+      //'onStateChange': onPlayerStateChange
+    }
+  });
+
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  //event.target.playVideo();
+}
+
+function parseToSeconds(str){
+  var p = str.split(':'), // split it at the colons
+      s = 0, m = 1;
+
+  while (p.length > 0) {
+      s += m * parseInt(p.pop(), 10);
+      m *= 60;
+  }
+
+  return s;
+}
+</script>

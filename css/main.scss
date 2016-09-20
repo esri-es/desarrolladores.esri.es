@@ -24,7 +24,9 @@ $font-path:       '{{ site.baseurl | prepend:site.url }}/node_modules/calcite-we
 .invisible{
   visibility: hidden;
 }
-
+.fill{
+  width: 100%;
+}
 /**********************
         Header
 ***********************/
@@ -70,15 +72,34 @@ $font-path:       '{{ site.baseurl | prepend:site.url }}/node_modules/calcite-we
     &:nth-child(2){
       width: 7rem;
     }
+    &:last-child{
+      width: 1rem;
+      .icon-ui-play:before{
+        padding-right: 0;
+      }
+    }
   }
 }
 #enrollCourse{
   background-color: rgba(0,0,0,.5);
-  text-transform: uppercase;
+  small{
+    font-size: .8rem;
+    font-weight: 300;
+  }
   &:hover {
       background-color: rgba(0,0,0,.8);
       color: white;
   }
 
   @include transition-prefixed(background .5s ease-out);
+}
+
+[data-modal="video"] .icon-ui-close::before{
+  padding-right: 0;
+}
+/**********************
+        LESSONS
+***********************/
+#lesson iframe{
+  height: 315px;
 }

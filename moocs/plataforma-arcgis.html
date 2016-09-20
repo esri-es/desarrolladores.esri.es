@@ -8,35 +8,34 @@ permalink: /moocs/plataforma-arcgis/
   <div class="grid-container leader-1">
     <div class="column-24 trailer-1">
       <nav class="breadcrumbs modifier-class">
-        <!--<a href="{{ site.baseurl | prepend:site.url }}" class="crumb">Inicio</a>
-        <a href="moocs/" class="crumb">MOOCs</a>-->
-        <a href="#" class="crumb">Inicio</a>
-        <a href="#" class="crumb">MOOCs</a>
+        <a href="{{ site.baseurl | prepend:site.url }}" class="crumb">Inicio</a>
+        <a href="../" class="crumb">MOOCs</a>
         <a href="#" class="crumb is-active">Aumentando la productividad con ArcGIS</a>
       </nav>
     </div>
 
 
-    <div class="post-13 padding-leader-4 padding-left-1">
+    <div class="padding-leader-4 padding-left-1">
 
       <h1>Aumentando la productividad <br>con ArcGIS</h1>
     </div>
     <p class="text-center">
       <a
-        href="#"
+        href="#inscripcion"
         id="enrollCourse"
         class=" btn btn-clear-white btn-half btn-large leader-2 padding-left-4
                 padding-right-4 trailer-3 padding-leader-1 padding-trailer-1
-                js-modal-toggle btn"
-        data-modal="inscription">
-          INSCRÍBETE AHORA
+                 btn"
+        >
+          INSCRÍBETE AHORA<br>
+          <small><em>lecciones disponibles a partir del 27 de Octubre</em></small>
       </a>
     </p>
   </div>
 </div>
 
 <div class="grid-container leader-1">
-  <div class="pre-1 column-15 post-2">
+  <div class="pre-1 column-16 post-1">
     <div class="block-group block-group-3-up trailer-1 uppercase">
       <div class="block"><div class="panel text-center"><strong>Duración:</strong> 3.5h</div></div>
       <div class="block"><div class="panel text-center"><strong>Precio:</strong> Gratis</div></div>
@@ -45,19 +44,35 @@ permalink: /moocs/plataforma-arcgis/
 
     <h2>Descripción</h2>
     <p>
-      Este MOOC está dirigido a desarrolladores web, especialmente a aquellos
-      que ya conocen la plataforma ArcGIS pero que quieren actualizarse.
+      Si eres un desarrollador web, has creado aplicaciones usando la
+      <a href="https://developers.arcgis.com/javascript/">API de ArcGIS para
+      JavaScript</a> y quieres mejorar tu productividad, este MOOC es para ti.
     </p>
     <p>
-      Este curso se compone de pequeñas lecciones en vídeo en las que el alumno
-      podrá refrescar sus conocimientos sobre la plataforma y las piezas clave
-      que la hacen única.
+      <strong>Metodología</strong>: Este curso se compone de pequeñas lecciones en vídeo con un pequeño test
+      de auto-evaluación al final de cada módulo.
     </p>
     <p>
-      Al final de cada lección se incluye un pequeño test de auto-evaluación para
-      que el alumno pueda verificar que ha comprendido los aspectos más importantes.
+      Este curso <strong>NO</strong> tiene como objetivo enseñarte a:
     </p>
-
+    <ul>
+      <li>Crear aplicaciones desde cero usando la API de ArcGIS para JavaScript</li>
+      <li>Gestionar geoservicios web</li>
+      <li>Realizar análisis espacial</li>
+      <li>Automatizar ni gestionar servidores</li>
+      <li>etc.</li>
+    </ul>
+    <p>
+      Si buscar formarte en estos u otros aspectos te recomendamos que visites:
+    </p>
+    <p class="text-center">
+      <a href="http://experto-desarrollo-gis.esri.es/" class="btn btn-clear">
+        Programa experto en desarrollo GIS
+      </a>
+      <a href="http://experto-desarrollo-gis.esri.es/" class="margin-left-1 btn btn-clear">
+        Cursos de formación de Esri España
+      </a>
+    </p>
     <h2>Contenidos</h2>
     <table class="table-striped" id="mooc-content">
       <thead>
@@ -65,6 +80,7 @@ permalink: /moocs/plataforma-arcgis/
           <th class="invisible">Módulo</th>
           <th>Lección</th>
           <th>Detalles</th>
+          <th class="text-center">Ver</th>
         </tr>
       </thead>
       <tbody>
@@ -75,18 +91,38 @@ permalink: /moocs/plataforma-arcgis/
          </td>
          <td>Objetivos del curso</td>
          <td>Veremos a quién va dirigido este curso, requisitos recomendados, objetivos y metodología.</td>
+         <td class="text-center">
+           <a href="#" >
+             <span class="icon-ui-play icon-ui-blue js-modal-toggle" aria-label="play icon"="" data-modal="video"></span>
+           </a>
+         </td>
         </tr>
         <tr>
           <td>Cuenta de organización</td>
           <td>Repaso a los tipos de cuentas, qué incluyen, qué ocurre cuando expiran, créditos y coste.</td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
+          </td>
         </tr>
         <tr>
           <td>Documentación</td>
           <td>Recursos oficiales, documentación de la API JS y otros recursos.</td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
+          </td>
         </tr>
         <tr>
           <td>Comunidad ArcGIS</td>
           <td>Dónde conectar con otros profesionales, actividad de la comunidad y otras referencias.</td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
+          </td>
         </tr>
         <tr>
           <td rowspan="7" class="text-center">
@@ -95,20 +131,40 @@ permalink: /moocs/plataforma-arcgis/
           </td>
          <td>Introducción a los web maps &amp; scenes</td>
          <td>Qué son, dónde se almacenan, metadatos, datos contenidos, por qué son importantes, ventajas a nivel de desarrollo y otras consideraciones.</td>
+         <td class="text-center">
+           <a href="#inscripcion" class="enroll-btn">
+             <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+           </a>
+         </td>
         </tr>
         <tr>
           <td>Manipular web maps</td>
           <td>Cómo se pueden crear, editar y consumir: interfaces gráficas, librerías, APIs y Runtimes.</td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
+          </td>
         </tr>
         <tr>
           <td>Especificación del web map</td>
-          <td>Repaso de la estructura en detalle del formato JSON.</td>
+          <td>Repaso de la estructura en detalle de la especificación en formato JSON.</td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
+          </td>
         </tr>
         <tr>
           <td>Web map como modelo de información</td>
           <td>
             Analizamos el web map como modelo de información geográfico junto
             al ecosistema de utilidades para desarrolladores que le rodean.
+          </td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
           </td>
         </tr>
         <tr>
@@ -117,12 +173,22 @@ permalink: /moocs/plataforma-arcgis/
             Veremos cómo podemos cargar el modelo (sin pintarlo) además de cómo
             cargarlo usando las clases: WebMap y WebScene.
           </td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
+          </td>
         </tr>
         <tr>
           <td>Cuándo utilizarlos</td>
           <td>
             Descubriremos las situaciones en las que el web map son especialmente
             útiles.
+          </td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
           </td>
         </tr>
         <tr>
@@ -131,9 +197,76 @@ permalink: /moocs/plataforma-arcgis/
             Trucos y consejos para depurar el código, acelerar
             el desarrollo, gestionar tus datos, etc.
           </td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="4" class="text-center">
+            <strong>Módulo 3:</strong><br>
+            Apps Configurables
+          </td>
+         <td>Introducción a las apps configurables</td>
+         <td>
+           Veremos qué son, para qué se usan, qué tipos hay, cómo se configuran
+           y una introducción a las apps creadas por Esri.
+         </td>
+         <td class="text-center">
+           <a href="#inscripcion" class="enroll-btn">
+             <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+           </a>
+         </td>
+        </tr>
+        <tr>
+          <td>Funcionamiento interno</td>
+          <td>
+            Analizaremos qué son los items, qué contienen, cómo se pueden
+            gestionar usando API REST y diferencias en cuanto a arquitectura
+            entre las apps de Esri y las personalizadas.
+          </td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Crear tus propias apps configurables</td>
+          <td>
+            Repasaremos en qué casos es recomendable usarlas, las ventajas que
+            ofrecen y los requisitos para poder incorporarlas al flujo de trabajo
+            de la organización.
+          </td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Apps configurables personalizadas</td>
+          <td>
+            Veremos: algunos ejemplos de este tipo de apps, Pros &amp; Cons
+            además de cómo crearlas y configurarlas. Por otro lado analizaremos sus
+            datos y metadatos, repasaremos herramientas y recursos para crealas,
+            y por último recordaremos qué tecnologías podemos usar para
+            desarrollarlas.
+          </td>
+          <td class="text-center">
+            <a href="#inscripcion" class="enroll-btn">
+              <span class="icon-ui-play icon-ui-gray" aria-label="play icon"></span>
+            </a>
+          </td>
         </tr>
       </tbody>
     </table>
+
+    <h2 id="inscripcion">Inscripciones</h2>
+    <p>
+      TODO: Pendiente de incluir el formulario de inscripción
+    </p>
   </div>
 
   <div class="column-5 post-1">
@@ -161,20 +294,17 @@ permalink: /moocs/plataforma-arcgis/
   </div>
 </div>
 
-<div class="js-modal modal-overlay modifier-class" data-modal="inscription">
+<div class="js-modal modal-overlay modifier-class" data-modal="video">
   <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
     <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
-    <h3 class='trailer-half'>Modal!</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h3 class='trailer-half'>Presentación del curso</h3>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lqg7JzgepUw" frameborder="0" allowfullscreen></iframe>
 
     <div class="text-right">
-        <button class="btn js-modal-toggle">okay</button>
-        <button class="btn-clear js-modal-toggle">cancel</button>
+        <button class="btn js-modal-toggle btn-fill" data-click="enrollCourse">
+          Siguiente vídeo <span class="icon-ui-right icon-ui-white" aria-label="play icon"></span>
+        </button>
     </div>
   </div>
 </div>
