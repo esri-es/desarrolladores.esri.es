@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Programa de startups - Esri España</title>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!--[if IE]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="../assets/calcite-web-1.0.0-beta.31/css/calcite-web.min.css">
+  <link rel="stylesheet" href="../css/extensions.css">
+  <link rel="stylesheet" href="../css/startups.css">
+  <script src="../js/calcite-web.min.js"></script>
+
+  <script>
+  window.onload = function () {calcite.init();};
+  </script>
+  <style>
+  .mt-75{
+    margin-top: .75rem;
+  }
+  .form-hint-text{
+    font-size: .8rem;
+    font-style: italic;
+  }
+  textarea{
+    min-height: 150px;
+  }
+  .alert.fill{
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .esri-logo{
+    background-image: url(../images/logo-esri-espana.png)!important;
+    width: 100px;
+    height: auto;
+    max-width: none;
+    max-height: none;
+
+  }
+  #tos{
+    position: fixed;
+    bottom: 0;
+    max-width: 100%;
+    font-size: .8rem;
+    width: 100%;
+    opacity: 0;
+    display: none;
+  }
+  #tos .icon-ui-close{
+    cursor: pointer;
+  }
+  .copy-left { display: inline-block; text-align: right; margin: 0px; -moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: “FlipH”; }
+
+  </style>
+</head>
+
+<body>
+  <div class="third-nav js-sticky" data-top="0">
+    <div class="grid-container">
+      <div class="column-24">
+        <!-- desktop sized navigation -->
+        <div class="tablet-hide">
+          <!-- logo / home -->
+          <a href="../" class="top-nav-title">Programa de Startups</a>
+
+          <!-- user specific dropdowns -->
+          <nav class="top-nav-list right" role="navigation" aria-labelledby="usernav">
+            <a href="#" id="download" class="btn mt-75 icon-ui-download" download="solicitud-programa-startups-esri.txt">Descargar copia de seguridad</a>
+            <a href="#" id="load" class="btn btn-clear js-modal-toggle margin-left-1 mt-75 icon-ui-upload" data-modal="load" >Restaurar copia</a>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-container leader-1">
+    <div class="column-24">
+      <nav class="breadcrumbs modifier-class">
+        <a href="../" class="crumb">Programa de startups</a>
+        <a href="#" class="crumb is-active">Solictud</a>
+      </nav>
+    </div>
+  </div>
+
+
+
+  <!--<div class="js-sticky scroll-show tablet-hide right text-center" data-top="46" style="background-color:white; right:40px">
+
+</div>-->
+
+<div class="js-modal modal-overlay modifier-class" data-modal="load">
+  <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+    <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+    <h3 class='trailer-half'>Cargar copia</h3>
+    <p>
+      Por favor selecciona la última copia del fichero que hayas descargado:
+    </p>
+
+    <input type="file" id="files" name="files" data-modal="load" />
+
+    <div class="alert alert-green leader-1 trailer-1 modifier-class" id="notification">
+      La copia ha sido restaurada con éxito
+      <a href="#" class="alert-close">close</a>
+    </div>
+
+    <div class="text-right">
+      <button class="btn btn-clear js-modal-toggle">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="column-16 leader-1 pre-4">
+    <div class="column-16">
+      <h2 class="text-center">Importante</h2>
+      <p>
+        Si tu empresa se encuentra en España es necesario que rellenes este formulario antes de ser aceptados en el <a href="https://developers.arcgis.com/en/startups/">programa a nivel internacional</a>.
+        </p>
+        <p>
+          <a href="https://developers.arcgis.com/startups/apply/">Ambos formularios</a> contienen bastantes campos comunes, por lo que si lo deseas podrás:
+        </p>
+        <ul>
+          <li>Rellenar este formulario en inglés.</li>
+          <li>Descargar una copia de seguridad.</li>
+          <li>Cargar una copia previamente descargada.<br>
+            <small>Por si deseas completar el formulario en varias sesiones</small></li>
+          </ul>
+          <p>
+            Una vez enviado el formulario nos pondremos en contacto contigo
+            en el plazo aproximado de una semana para fijar la fecha para una
+            reunión.
+          </p>
+        </div>
+        <form action="" method="post">
+          <div class="column-16">
+            <h2 id="sobre-la-empresa">
+              <a class="anchor" href="#sobre-la-empresa" aria-hidden="true">
+                <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
+              </a>
+              Sobre la empresa
+            </h2>
+            <label>
+              Nombre de la empresa<span class="text-red">*</span>
+              <input type="text" id="name" name="name" required aria-required="true"/>
+
+              <span class="form-hint">
+                <span class="form-hint-text">Nombre de la sociedad (SL, SLNE, SC, ...)</span>
+                <span class="form-hint-icon"></span>
+              </span>
+
+            </label>
+          </div>
+
+
+          <div class="column-8 first-column">
+            <label>
+              Ciudad<span class="text-red">*</span>
+              <input type="text" id="city" name="city" required aria-required="true"/>
+            </label>
+          </div>
+
+          <div class="column-8 last-column">
+            <label>
+              Página web<span class="text-red">*</span>
+              <input type="text" id="website" name="website" required aria-required="true"/>
+            </label>
+          </div>
+
+          <div class="column-8 first-column">
+            <label>
+              Cuenta de Twitter
+              <input type="text" id="twitter" name="twitter"/>
+            </label>
+          </div>
+          <div class="column-8 last-column">
+            <label>
+              Cuenta de Linkedin
+              <input type="text" id="twitter" name="twitter"/>
+            </label>
+          </div>
+
+
+
+          <div class="column-16 first-column">
+            <h2 class="leader-2" id="datos-de-contacto">Datos de contacto</h2>
+          </div>
+
+          <div class="column-8 first-column">
+            <label>
+              <strong>Responsable de negocio<span class="text-red">*</span></strong>
+              <input type="text" id="ceo-name" name="ceo-name" required aria-required="true"/>
+              <span class="form-hint">
+                <span class="form-hint-text">Nombre y apellidos</span>
+                <span class="form-hint-icon"></span>
+              </span>
+            </label>
+
+            <label>
+              E-mail<span class="text-red">*</span>
+              <input type="text" id="ceo-email" name="ceo-email" required aria-required="true"/>
+            </label>
+
+            <label>
+              Cuenta de Linkedin
+              <input type="text" id="ceo-linkedin" name="ceo-linkedin"/>
+            </label>
+          </div>
+
+          <div class="column-8 last-column">
+            <label>
+              <strong>Responsable técnico<span class="text-red">*</span></strong>
+              <input type="text" id="cto-name" name="cto-name" required aria-required="true"/>
+              <span class="form-hint">
+                <span class="form-hint-text">Nombre y apellidos</span>
+                <span class="form-hint-icon"></span>
+              </span>
+            </label>
+
+            <label>
+              E-mail<span class="text-red">*</span>
+              <input type="text" id="cto-email" name="cto-email" required aria-required="true"/>
+            </label>
+
+            <label>
+              Cuenta de Linkedin
+              <input type="text" id="cto-linkedin" name="cto-linkedin"/>
+            </label>
+          </div>
+
+
+
+
+
+
+          <div class="column-16 first-column">
+            <h2 class="leader-2" id="antecedentes-de-la-empresa">Antecedentes de la empresa</h2>
+          </div>
+
+          <div class="column-8 first-column">
+            <label>
+              Nombre del producto<span class="text-red">*</span>
+              <input type="text" id="product-name" name="product-name" required aria-required="true"/>
+            </label>
+          </div>
+          <div class="column-8 last-column">
+            <label>
+              ¿Cuándo empezásteis el proyecto?<span class="text-red">*</span>
+              <input type="text" id="start-date" name="start-date" required aria-required="true"/>
+            </label>
+          </div>
+
+          <div class="column-8 first-column">
+            <label>
+              ¿Qué ofrecéis?<span class="text-red">*</span>
+              <textarea id="descripcion-producto" name="descripcion-producto" required aria-required="true"/></textarea>
+            </label>
+          </div>
+          <div class="column-8 last-column">
+            <label>
+              ¿Qué esperáis del programa?<span class="text-red">*</span>
+              <textarea id="expectativas-programa" name="expectativas-programa" required aria-required="true"/></textarea>
+            </label>
+          </div>
+
+          <div class="column-8 first-column">
+            <label>
+              ¿Cuántas personas personas sois?<span class="text-red">*</span>
+              <select name="employees" id="employees" class="select btn-fill" onchange="" required aria-required="true"/></textarea>
+              <option value=""></option>
+              <option value="1-2">1-2</option>
+              <option value="3-5">3-5</option>
+              <option value="6-10">6-10</option>
+              <option value="11-40">11-40</option>
+              <option value="41+">41+</option>
+            </select>
+          </label>
+        </div>
+        <div class="column-8 last-column">
+          <label>
+            Fecha de inicio de la actividad económica<span class="text-red">*</span>
+            <input type="text" id="start-activity-date" name="start-activity-date" required aria-required="true"/></textarea>
+          </label>
+        </div>
+
+        <div class="column-8 first-column">
+          <label>
+            Industria primaria a la que os dirigís<span class="text-red">*</span>
+            <select name="sector-principal" id="sector-principal" class="select btn-fill" onchange="" required>
+              <option value=""></option>
+              <option value="Agricultura">Agricultura</option>
+              <option value="Agua / aguas residuales / aguas pluviales">Agua / aguas residuales / aguas pluviales</option>
+              <option value="Arquitectura, ingeniería, construcción">Arquitectura, ingeniería, construcción</option>
+              <option value="Aviación">Aviación</option>
+              <option value="Bibliotecas / Museos">Bibliotecas / Museos</option>
+              <option value="Ciencias">Ciencias</option>
+              <option value="Ciudad / Gobierno de Ciudad">Ciudad / Gobierno de Ciudad</option>
+              <option value="Civil">Civil</option>
+              <option value="Conservación">Conservación</option>
+              <option value="Defensa">Defensa</option>
+              <option value="Departamento de transporte">Departamento de transporte</option>
+              <option value="Desarrollo sostenible">Desarrollo sostenible</option>
+              <option value="Educación K-12">Educación K-12</option>
+              <option value="Educación más alta">Educación más alta</option>
+              <option value="Electricidad / Gas">Electricidad / Gas</option>
+              <option value="Fabricación">Fabricación</option>
+              <option value="Ferrocarril">Ferrocarril</option>
+              <option value="Fuego / Rescate / EMS">Fuego / Rescate / EMS</option>
+              <option value="Fuera de EE.UU.. Seguridad nacional">Fuera de EE.UU.. Seguridad nacional</option>
+              <option value="Gestión de emergencias">Gestión de emergencias</option>
+              <option value="GIS / TI">GIS / TI</option>
+              <option value="Gobierno estatal">Gobierno estatal</option>
+              <option value="Gobierno regional">Gobierno regional</option>
+              <option value="Hospitales / Sistemas de Salud">Hospitales / Sistemas de Salud</option>
+              <option value="Humanitario">Humanitario</option>
+              <option value="Imágenes">Imágenes</option>
+              <option value="Inmobiliario">Inmobiliario</option>
+              <option value="Instalaciones">Instalaciones</option>
+              <option value="Instituciones de investigación / Ciencia">Instituciones de investigación / Ciencia</option>
+              <option value="Legal">Legal</option>
+              <option value="Las energías renovables">Las energías renovables</option>
+              <option value="Logística / Transporte / Distribución">Logística / Transporte / Distribución</option>
+              <option value="Mapeo &amp; Estadística">Mapeo &amp; Estadística</option>
+              <option value="Marítimo / Puerto">Marítimo / Puerto</option>
+              <option value="Medios &amp; Entretenimiento">Medios &amp; Entretenimiento</option>
+              <option value="Militar de Estados Unidos">Militar de Estados Unidos</option>
+              <option value="Minería">Minería</option>
+              <option value="Petróleo &amp; Gas">Petróleo &amp; Gas</option>
+              <option value="Planificación de la Comunidad / Desarrollo Económico">Planificación de la Comunidad / Desarrollo Económico</option>
+              <option value="Productos farmacéuticos">Productos farmacéuticos</option>
+              <option value="Recursos Ambientales / Naturales">Recursos Ambientales / Naturales</option>
+              <option value="Recursos Hídricos">Recursos Hídricos</option>
+              <option value="Salud pública">Salud pública</option>
+              <option value="Seguros">Seguros</option>
+              <option value="Servicios financieros">Servicios financieros</option>
+              <option value="Servicios sociales">Servicios sociales</option>
+              <option value="Silvicultura">Silvicultura</option>
+              <option value="Telco / Cable">Telco / Cable</option>
+              <option value="Trabajos públicos">Trabajos públicos</option>
+              <option value="Transporte público">Transporte público</option>
+              <option value="Tubería">Tubería</option>
+              <option value="Venta al por menor (Retail)">Venta al por menor (Retail)</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </label>
+        </div>
+        <div class="column-8 last-column">
+          <label>
+            Industria secundaria a la que os dirigís<span class="text-red">*</span>
+            <select name="sector-secundario" id="sector-secundario" class="select btn-fill" onchange="" required>
+              <option value=""></option>
+              <option value="Agricultura">Agricultura</option>
+              <option value="Agua / aguas residuales / aguas pluviales">Agua / aguas residuales / aguas pluviales</option>
+              <option value="Arquitectura, ingeniería, construcción">Arquitectura, ingeniería, construcción</option>
+              <option value="Aviación">Aviación</option>
+              <option value="Bibliotecas / Museos">Bibliotecas / Museos</option>
+              <option value="Ciencias">Ciencias</option>
+              <option value="Ciudad / Gobierno de Ciudad">Ciudad / Gobierno de Ciudad</option>
+              <option value="Civil">Civil</option>
+              <option value="Conservación">Conservación</option>
+              <option value="Defensa">Defensa</option>
+              <option value="Departamento de transporte">Departamento de transporte</option>
+              <option value="Desarrollo sostenible">Desarrollo sostenible</option>
+              <option value="Educación K-12">Educación K-12</option>
+              <option value="Educación más alta">Educación más alta</option>
+              <option value="Electricidad / Gas">Electricidad / Gas</option>
+              <option value="Fabricación">Fabricación</option>
+              <option value="Ferrocarril">Ferrocarril</option>
+              <option value="Fuego / Rescate / EMS">Fuego / Rescate / EMS</option>
+              <option value="Fuera de EE.UU.. Seguridad nacional">Fuera de EE.UU.. Seguridad nacional</option>
+              <option value="Gestión de emergencias">Gestión de emergencias</option>
+              <option value="GIS / TI">GIS / TI</option>
+              <option value="Gobierno estatal">Gobierno estatal</option>
+              <option value="Gobierno regional">Gobierno regional</option>
+              <option value="Hospitales / Sistemas de Salud">Hospitales / Sistemas de Salud</option>
+              <option value="Humanitario">Humanitario</option>
+              <option value="Imágenes">Imágenes</option>
+              <option value="Inmobiliario">Inmobiliario</option>
+              <option value="Instalaciones">Instalaciones</option>
+              <option value="Instituciones de investigación / Ciencia">Instituciones de investigación / Ciencia</option>
+              <option value="Legal">Legal</option>
+              <option value="Las energías renovables">Las energías renovables</option>
+              <option value="Logística / Transporte / Distribución">Logística / Transporte / Distribución</option>
+              <option value="Mapeo &amp; Estadística">Mapeo &amp; Estadística</option>
+              <option value="Marítimo / Puerto">Marítimo / Puerto</option>
+              <option value="Medios &amp; Entretenimiento">Medios &amp; Entretenimiento</option>
+              <option value="Militar de Estados Unidos">Militar de Estados Unidos</option>
+              <option value="Minería">Minería</option>
+              <option value="Petróleo &amp; Gas">Petróleo &amp; Gas</option>
+              <option value="Planificación de la Comunidad / Desarrollo Económico">Planificación de la Comunidad / Desarrollo Económico</option>
+              <option value="Productos farmacéuticos">Productos farmacéuticos</option>
+              <option value="Recursos Ambientales / Naturales">Recursos Ambientales / Naturales</option>
+              <option value="Recursos Hídricos">Recursos Hídricos</option>
+              <option value="Salud pública">Salud pública</option>
+              <option value="Seguros">Seguros</option>
+              <option value="Servicios financieros">Servicios financieros</option>
+              <option value="Servicios sociales">Servicios sociales</option>
+              <option value="Silvicultura">Silvicultura</option>
+              <option value="Telco / Cable">Telco / Cable</option>
+              <option value="Trabajos públicos">Trabajos públicos</option>
+              <option value="Transporte público">Transporte público</option>
+              <option value="Tubería">Tubería</option>
+              <option value="Venta al por menor (Retail)">Venta al por menor (Retail)</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="column-8 first-column">
+          <label>
+            ¿Cuales son vuestros competidores?<span class="text-red">*</span>
+            <textarea id="competidores" name="competidores" required=""></textarea>
+          </label>
+        </div>
+        <div class="column-8 last-column">
+          <label>
+            Cómo pensáis usar/integraros con ArcGIS<span class="text-red">*</span>
+            <textarea id="nivel-integracion" name="nivel-integracion" required></textarea>
+          </label>
+        </div>
+
+        <div class="column-8 first-column">
+          <label>
+            Háblanos de tu modelo de negocio<span class="text-red">*</span>
+            <textarea id="modelo-de-negocio" name="modelo-de-negocio" required></textarea>
+            <span class="form-hint">
+              <span class="form-hint-text">¿Cómo haréis dinero?, ¿qué precios tenéis?.</span>
+              <span class="form-hint-icon"></span>
+            </span>
+          </label>
+        </div>
+        <div class="column-8 last-column">
+          <label>
+            ¿Quienes son vuestros usuarios?<span class="text-red">*</span>
+            <textarea id="usuario-objetivo" name="usuario-objetivo" required></textarea>
+            <span class="form-hint">
+              <span class="form-hint-text">Tipo de usuarios: cargo, profesión, ...</span>
+              <span class="form-hint-icon"></span>
+            </span>
+          </label>
+        </div>
+
+        <div class="column-8 first-column">
+          Número de clientes<span class="text-red">*</span>
+          <select name="num-clientes" class="select btn-fill" onchange="">
+            <option value="" required></option>
+            <option value="0">0</option>
+            <option value="1-10">1-10</option>
+            <option value="10-50">10-50</option>
+            <option value="50-100">50-100</option>
+            <option value="100-500">100-500</option>
+            <option value="+500">500+</option>
+          </select>
+        </label>
+      </div>
+      <div class="column-8 last-column">
+        <label>
+          Inversión recibida hasta la fecha<span class="text-red">*</span>
+          <select name="inversion" id="inversion" class="select btn-fill" onchange="" required>
+            <option value=""></option>
+            <option value="$0k - $1k">$0k - $1k</option>
+            <option value="$1k - $250k">$1k - $250k</option>
+            <option value="$250k - $500k">$250k - $500k</option>
+            <option value="$500k - $1M">$500k - $1M</option>
+            <option value="$1M - $5M">$1M - $5M</option>
+            <option value="$5M+">$5M+</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="column-8 first-column">
+        <label>
+          ¿Tenéis algún cliente importante que queráis referenciar?<span class="text-red">*</span>
+          <textarea id="clientes-referenciados" name="clientes-referenciados" required></textarea>
+          <span class="form-hint">
+            <span class="form-hint-text">Puedes responder: No</span>
+            <span class="form-hint-icon"></span>
+          </span>
+        </label>
+      </div>
+      <div class="column-8 last-column">
+        <label>
+          ¿Colaboráis con otros proveedores de tecnología?<span class="text-red">*</span>
+          <textarea id="proveedores-tecnologicos" name="proveedores-tecnologicos" required></textarea>
+          <span class="form-hint">
+            <span class="form-hint-text">Por ejemplo: Telefónica, IBM, ...</span>
+            <span class="form-hint-icon"></span>
+          </span>
+        </label>
+      </div>
+      <div class="column-16 first-column">
+        <label>
+          ¿Participáis en alguna aceleradora, incubadora o en algún otro programa de startups?, ¿cuál?<span class="text-red">*</span>
+          <textarea id="aceleradoras" name="aceleradoras" required></textarea>
+        </label>
+      </div>
+
+
+
+
+      <div class="column-16 first-column">
+        <h2 class="leader-2" id="antecedentes-del-producto">Antecedentes del producto</h2>
+      </div>
+
+      <div class="column-16 first-column">
+        <label>
+          Eslogan de tu producto (claim)<span class="text-red">*</span>
+          <input type="text" id="eslogan" name="eslogan" required aria-required="true"/>
+        </label>
+      </div>
+
+
+      <div class="column-16 first-column">
+        <label>
+          Propuesta de valor y propuesta única de valor.<span class="text-red">*</span>
+          <textarea id="propuesta-de-valor" name="propuesta-de-valor" required></textarea>
+          <span class="form-hint">
+            <span class="form-hint-text">¿Qué resuelve tu problema?, ¿cuál es tu valor diferencial respecto de la competencia?</span>
+            <span class="form-hint-icon"></span>
+          </span>
+        </label>
+      </div>
+
+
+
+
+      <div class="column-16 first-column">
+        <h2 class="leader-2" id="cuestiones-tecnicas">Cuestiones técnicas</h2>
+      </div>
+      <div class="column-16 first-column">
+        <label>
+          ¿Qué tecnologías utilizáis? (stack tecnologico)<span class="text-red">*</span>
+          <input type="text" id="stack-tecnologico" name="stack-tecnologico" required aria-required="true"/>
+          <span class="form-hint">
+            <span class="form-hint-text">Por ej: lenguajes de programación, bases de datos, servicios en la nube, los frameworks web, SDK móviles, etc.</span>
+            <span class="form-hint-icon"></span>
+          </span>
+        </label>
+      </div>
+
+      <div class="column-8 first-column">
+        <label>
+          ¿Usáis o generáis open data?<span class="text-red">*</span>
+          <select name="open-data" id="open-data" class="select btn-fill" onchange="" required>
+            <option value=""></option>
+            <option value="Consumimos">Consumimos</option>
+            <option value="Generamos">Generamos</option>
+            <option value="Ambos">Ambos</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="column-8 last-column">
+        <label>
+          Cómo se ofrece tu solución<span class="text-red">*</span>
+          <select name="modelo-distribucion" id="modelo-distribucion" class="select btn-fill" onchange="" required>
+            <option value=""></option>
+            <option value="Como servicio (SaaS)">Como servicio (SaaS)</option>
+            <option value="On-premise">On-premise</option>
+            <option value="Ambas">Ambas</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="column-8 first-column">
+        <fieldset class="fieldset-checkbox">
+          <legend>En qué tecnologías estáis interesados<span class="text-red">*</span></legend>
+          <label><input type="checkbox" name="intereses[]" value="3D">3D</label>
+          <label><input type="checkbox" name="intereses[]" value="Almacenamiento de datos">Almacenamiento de datos</label>
+          <label><input type="checkbox" name="intereses[]" value="Análisis y Análisis Espacial">Análisis y análisis espacial</label>
+          <label><input type="checkbox" name="intereses[]" value="Demografía y GeoEnriquecimiento">Demografía y GeoEnriquecimiento</label>
+          <label><input type="checkbox" name="intereses[]" value="Enrutamiento y direcciones">Enrutamiento y direcciones</label>
+          <label><input type="checkbox" name="intereses[]" value="Geocodificación">Geocodificación</label>
+          <label><input type="checkbox" name="intereses[]" value="Mapeo y visualización">Mapeo y visualización</label>
+          <label><input type="checkbox" name="intereses[]" value="Procesamiento en tiempo real">Procesamiento en tiempo real</label>
+          <label><input type="checkbox" name="intereses[]" value="Otro">Otro</label>
+        </fieldset>
+      </div>
+
+      <div class="column-8 last-column">
+        <fieldset class="fieldset-checkbox">
+          <legend>¿Qué tecnologías de mapas usáis actualmente?<span class="text-red">*</span></legend>
+          <label><input type="checkbox" name="tec[]" value="esri">Esri</label>
+          <label><input type="checkbox" name="tec[]" value="carto">Carto</label>
+          <label><input type="checkbox" name="tec[]" value="google">Google</label>
+          <label><input type="checkbox" name="tec[]" value="mapbox">Mapbox</label>
+          <label><input type="checkbox" name="tec[]" value="open-source">Open Source</label>
+          <label><input type="checkbox" name="tec[]" value="other">Otra</label>
+          <label><input type="checkbox" name="tec[]" value="none">Ninguna</label>
+        </fieldset>
+      </div>
+
+      <div class="column-16 first-column">
+        <label>
+          URLs del producto.<span class="text-red">*</span>
+          <textarea id="propuesta-de-valor" name="propuesta-de-valor" required></textarea>
+          <span class="form-hint">
+            <span class="form-hint-text">Vídeo, app stores (App Store / Play Store) y/o web.</span>
+            <span class="form-hint-icon"></span>
+          </span>
+        </label>
+      </div>
+
+      <div class="column-16 first-column">
+        <label>
+          Estás familiarizado con el software de Esri<span class="text-red">*</span>
+          <select name="familiarizado-esri" id="familiarizado-esri" class="select btn-fill" onchange="" required>
+            <option value=""></option>
+            <option value="Sí, mucho">Sí, mucho</option>
+            <option value="Sí, bastante">Sí, bastante</option>
+            <option value="Sí, un poco">Sí, un poco</option>
+            <option value="No">No</option>
+          </select>
+        </label>
+      </div>
+
+
+    <div class="column-16 first-column">
+      <div class="alert alert-green leader-1 trailer-1 modifier-class fade-in fill" id="email-success">
+        La solicitud ha sido enviada con éxito
+      </div>
+      <div class="alert alert-red leader-1 trailer-1 modifier-class fade-in fill" id="email-error">
+        La solicitud no ha podido ser enviada, por favor guarde una copia de
+        seguridad e inténtelo más tarde. Si el problema persiste póngase en
+        contacto con nosotros a través de raul.jimenez@esri.es
+      </div>
+    </div>
+
+    <div class="column-16 first-column">
+      <fieldset class="fieldset-checkbox">
+        <label>
+          <input type="checkbox" name="privacidad" value="privacidad" required>
+          He leído y acepto la <a href="#" class="js-modal-toggle" data-modal="tos">política de privacidad</a>
+        </label>
+      </fieldset>
+    </div>
+
+    <div class="column-16 first-column">
+      <button type="submit" class="btn-fill leader-2">Enviar solicitud</button>
+    </div>
+
+
+  </form>
+</div>
+</div>
+
+
+<div>
+  <footer class="footer leader-3 link-dark-gray clearfix" role="contentinfo">
+    <div class="grid-container">
+      <nav class="column-6">
+        <h6>ArcGIS para desarrolladores</h6>
+        <ul class="list-plain">
+          <li><a href="http://developers.arcgis.com/">Presentación</a></li>
+          <li><a href="http://developers.arcgis.com/features">Características</a></li>
+          <li><a href="http://developers.arcgis.com/documentation">Documentación</a></li>
+          <li><a href="http://esri.github.io">Github</a></li>
+          <li><a href="http://desarrolladores.esri.es">Blog</a></li>
+        </ul>
+      </nav>
+
+      <nav class="column-6">
+        <h6>Plataforma ArcGIS</h6>
+        <ul class="list-plain">
+          <li><a href="http://arcgis.com">ArcGIS Online</a></li>
+          <li><a href="http://www.esri.com/en/software/arcgis-pro">ArcGIS Pro</a></li>
+          <li><a href="http://server.arcgis.com">ArcGIS for Server</a></li>
+          <li><a href="http://developers.arcgis.com">ArcGIS for Developers</a></li>
+          <li><a href="http://marketplace.arcgis.com">ArcGIS Marketplace</a></li>
+        </ul>
+      </nav>
+
+      <nav class="column-6">
+        <h6>Sobre Esri</h6>
+        <ul class="list-plain">
+          <li><a href="http://www.esri.es">Esri España</a></li>
+          <li><a href="http://www.conferencia.esri.es">Conferencia Esri España</a></li>
+          <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit - EEUU</a></li>
+          <li><a href="http://www.esri.com/events/devsummit-europe">Developer Summit - Berlín</a></li>
+          <li><a href="http://desarrolladores.esri.es/devsummit">Developer Summit - España</a></li>
+        </ul>
+      </nav>
+
+      <nav class="column-6">
+        <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+        <section class="footer-social-nav leader-1">
+          <a class="icon-social-twitter" aria-label="Esri on Twitter" href="https://twitter.com/esri_spain"></a>
+          <a class="icon-social-facebook" aria-label="Esri on Facebook" href="http://www.facebook.com/pages/Esri-Espa%C3%B1a-Geosistemas/189806744376056"></a>
+          <a class="icon-social-github" aria-label="Esri on GitHub" href="http://esri.github.io/"></a>
+          <a class="icon-social-contact" aria-label="Contact Esri" href="http://desarrolladores.esri.es/contacto"></a>
+        </section>
+      </nav>
+
+      <div class="column-24 leader-1">
+        <p><small><a href="https://en.wikipedia.org/wiki/Copyleft">Copyleft <span class="copy-left">©</span></a> 2016 Esri España | <a href="#" class="js-modal-toggle" data-modal="tos">Política de privacidad</a> | <a href="http://www.esri.es/es/aviso-legal/">Aviso legal</a></small></p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<div id="tos" class="padding-1 alert modifier-class is-active alert-yellow text-center">
+  Usamos "cookies" de terceros para recopilar
+  información que nos ayude a mejorar esta página, si cierras este
+  mensaje entenderemos que aceptas
+  <a href="#" class="js-modal-toggle" data-modal="tos">
+    nuestra política de privacidad
+  </a>
+  <span class="icon-ui-close" aria-label="close icon"></span>
+</div>
+
+<div class="js-modal modal-overlay modifier-class" data-modal="tos">
+  <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+    <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+    <h3 class='trailer-half'>Política de privacidad</h3>
+    <p>ESRI ESPAÑA SOLUCIONES GEOESPACIALES, S.L. (en adelante, Esri), con C.I.F. número: B-86900057, y domicilio social en C/ Emilio Muñoz 35/37 28037 (Madrid), debidamente inscrita en el Registro Mercantil de Madrid, titular del sitio web www.esri.es, expone en esta sección la Política de Privacidad corporativa sobre la información de carácter personal que el usuario puede facilitar cuando visite nuestro Web site. El objetivo de Esri es proteger la información en Internet, del mismo modo que es protegida por la empresa en los demás medios. La Política de Privacidad de Esri está presidida por el cumplimiento de la legislación vigente en materia de protección de datos de carácter personal y la Ley de Servicios de la Sociedad de la Información y Comercio Electrónico.</p>
+
+    <h4>1. Uso y tratamiento de datos de carácter personal</h4>
+    <p>
+      En cumplimiento de lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (en adelante, LOPD), Esri le informa de que los datos de carácter personal por Vd. proporcionados, así como aquellos datos a los que se pueda acceder como consecuencia de su navegación, serán incorporados a los ficheros automatizados de la entidad, pudiendo ejercitar su derecho de acceso, rectificación, cancelación y oposición al tratamiento de sus datos en los términos y condiciones previstos más abajo, en el apartado 2º. En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico, (en adelante LSSICE), Esri no enviará por correo electrónico comunicaciones publicitarias que no hayan sido autorizadas por los usuarios. Esri identificará mediante la palabra publicidad aquellos correos o Newsletters que contengan comunicaciones comerciales o promociones, exclusivamente.
+    </p>
+    <p>
+      En aquellos casos donde sea necesario cumplimentar un formulario (inscripción a seminarios o eventos), o remitir un correo electrónico (contacta: informacion@esri.es Empleo: rrhh@esri.es) y hacer click en el botón de enviar, su realización implicará necesariamente que haya sido informado (en virtud del artículo 5 LOPD) y, en su caso, ha otorgado el correspondiente consentimiento (a tenor del artículo 6 LOPD) al contenido de la presente política de privacidad.
+    </p>
+    <p>
+      Por otra parte, mediante el registro de los datos, el usuario otorga su consentimiento al tratamiento de los mismos con las finalidades en cada caso señaladas.
+    </p>
+    <p>
+      Así, siempre que ESri le solicite datos de carácter personal, incluirá el correspondiente clausulado legal y un enlace (link) vinculado a la presente Política con el propósito de hacerle partícipe de sus derechos y obligaciones establecidos en la LOPD y LSSIC.
+    </p>
+
+    <h4>2. Ejercicio de derechos: acceso, rectificación cancelación y oposición</h4>
+    <p>
+      Aquellas personas físicas que hayan facilitado sus datos a Esri podrán dirigirse a la misma, en su calidad de Responsable del fichero, con el fin de poder ejercitar gratuitamente sus derechos de acceso, rectificación, cancelación y oposición respecto de los datos incorporados en sus ficheros. Dado el carácter confidencial de la información, Vd. no podrá ejercitar sus derechos telefónicamente, debido a que este medio no permite acreditar su identidad como titular de los datos registrados. El interesado podrá ejercitar sus derechos mediante comunicación por escrito dirigida a Esri en la siguiente dirección: ATT: Responsable LOPD. C/ Emilio Muñoz 35  28037 (Madrid), con la siguiente referencia en su carta: Ejercicio de derechos (junto a su solicitud escrita y firmada, deberá acreditar su personalidad aportando fotocopia de su D.N.I.).
+    </p>
+
+    <h4>3. Menores de edad</h4>
+    <p>
+      La presente página web de Esri no se dirige a menores de edad. No obstante, Esri se exime de cualquier responsabilidad por el incumplimiento de este requisito.
+    </p>
+
+    <h4>4. Modificación de la política de privacidad</h4>
+    <p>
+      Esri se reserva el derecho a modificar su Política de Privacidad, de acuerdo a su propio criterio, o motivado por un cambio doctrinal de la Agencia Española de Protección de Datos, legislativo o jurisprudencial. Cualquier modificación de la Política de Privacidad será publicada al menos diez días antes de su efectiva aplicación. El uso del Web después de dichos cambios implicará la expresa aceptación de éstos.
+    </p>
+    <button class="btn btn-clear js-modal-toggle right">Cerrar</button>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="../js/unserialize.jquery.1.0.3.js"></script>
+<script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: (target.offset().top-100)
+        }, 1000);
+        return false;
+      }
+    }
+  });
+
+  if(window.location.hash){
+    setTimeout(function(){
+      var target = $(window.location.hash);
+      try{
+        $('html, body').animate({
+          scrollTop: (target.offset().top - 100)
+        }, 1000);
+      }catch(e){
+        console.log(e);
+      };
+    },1000);
+  }
+
+
+  $('#download').click(function(e){
+    //e.preventDefault();
+    a=$("form").serialize()
+    b=$.unserialize(a)
+    t=JSON.stringify(b, null, "\t")
+    this.href = 'data:text/plain;charset=utf-8,'
+    + encodeURIComponent(t);
+  });
+
+
+  // Check for the various File API support.
+  if (window.File && window.FileReader && window.FileList && window.Blob) {
+    // Great success! All the File APIs are supported.
+  } else {
+    alert('The File APIs are not fully supported in this browser.');
+  }
+
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      if(f.type !== "text/plain"){
+        alert("Has seleccionado un fichero que no es de texto plano");
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          try{
+            var f = JSON.parse(e.target.result);
+          }catch(e){
+            alert("El fichero no es correcto, por favor ponte en contacto con raul.jimenez@esri.es");
+          }
+          $("form").unserialize(f);
+          $("#notification").addClass("is-active fade-in");
+        };
+      })(f);
+
+      reader.readAsText(f);
+    }
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+  $("#notification .alert-close").click(function(e){$(this).parent().removeClass("is-active")})
+
+  $("form").submit(function(e){
+    e.preventDefault();
+    if($('[name="tec[]"]').is(":checked") === false){
+      alert("Por favor completa: ¿Qué tecnologías de mapas usáis actualmente?");
+    }else if($('[name="intereses[]"]').is(":checked") === false){
+      alert("Por favor completa: En qué tecnologías estáis interesados");
+    }else{
+
+      var data = $("form").serialize();
+      $.post( "apply.php", data)
+        .done(function( data ) {
+          data = JSON.parse(data);
+          if(data.error === true){
+            $("#email-error").addClass("is-active");
+          }else{
+            $("#email-success").addClass("is-active");
+            $("#email-error").removeClass("is-active");
+            $("form button").attr("disabled","disabled");
+          }
+        });
+    }
+
+  });
+
+  if(!localStorage.acceptedTos){
+    $("#tos").show();
+    $("#tos").addClass("animate-fade-in")
+  }
+  $("#tos .icon-ui-close").click(function(){
+    $("#tos").hide();
+    localStorage.acceptedTos = true;
+  });
+});
+</script>
+</body>
+</html>
