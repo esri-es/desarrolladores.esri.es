@@ -4,15 +4,15 @@ include_once "config.php";
 if(!empty($_POST)){
   require_once 'vendor/swiftmailer/swiftmailer/lib/swift_required.php';
 
-  $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
-    ->setUsername('in.mento')
-    ->setPassword('3OjFcAzyuZ');
+  $transport = Swift_SmtpTransport::newInstance($smtp, $port, $protocol)
+    ->setUsername($user)
+    ->setPassword($pass);
 
   $mailer = Swift_Mailer::newInstance($transport);
 
   $message = Swift_Message::newInstance('Nueva solicitud de startup')
-    ->setFrom(array('aul.jimenez@esri.es' => 'Startups - Esri España'))
-    ->setTo(array('raul.jimenez@esri.es'));
+    ->setFrom(array($from => 'Startups - Esri España'))
+    ->setTo(array($to));
 
   $msg = "";
   $csv_headers = "";
