@@ -2,7 +2,11 @@
   "id": "lqg7JzgepUw",
   "slides": "http://esri-es.github.io/moocs/plataforma-arcgis/desarrolladores-web/introduccion/objetivos/",
   "index": [
-    {"00:00": "name"},
-    {"01:12": "hola"}
+    {"00:00":	"Presentación de Raúl"},
+    {"00:30":	"A quién va dirigido este curso"},
+    {"00:45":	"Requisitos para aprovechar el curso"},
+    {"01:35":	"Objetivos del curso"},
+    {"03:17":	"Algunas cosas que veremos"},
+    {"03:57":	"Metodología del curso"}
   ]
 }

@@ -46,6 +46,13 @@ $(document).ready(function(){
     player.seekTo($(this).data("seconds"));
   });
 
+  if(location.search==="?enroll=%E2%9C%93"){
+    $('#enroll-success').addClass('is-active');
+  }
+  $("#enroll-success .alert-close").click(function(){
+    $(this).parent().removeClass("is-active");
+  });
+
   $("#prev").click(function(){
     var el = $(".side-nav .is-active")[0];
     var prev = $(el).prev();
@@ -63,11 +70,35 @@ $(document).ready(function(){
     redirect(next.attr("href"));
   });
 
-  function redirect(slug){
-    var a=window.location.href.split("/")
-    a.pop()
-    a.push(slug)
-    window.location= a.join("/");
+  function redirect(relative){
+    //var tmp = window.location.href.split("/");
+    //absolute(window.location.href,relative)
+    /*tmp.pop();tmp.pop();
+    tmp.push(slug);*/
+
+    window.location= absolute(window.location.href,relative);
   }
+  function absolute(base, relative) {
+    var stack = base.split("/"),
+        parts = relative.split("/");
+    stack.pop(); // remove current file name (or empty string)
+                 // (omit if "base" is the current folder without trailing slash)
+    for (var i=0; i<parts.length; i++) {
+        if (parts[i] == ".")
+            continue;
+        if (parts[i] == "..")
+            stack.pop();
+        else
+            stack.push(parts[i]);
+    }
+    return stack.join("/");
+}
+
+  $("#rewind").click(function(){
+    player.seekTo(player.getCurrentTime()-15);
+  });
+  $("#forward").click(function(){
+    player.seekTo(player.getCurrentTime()+15);
+  });
 
 });

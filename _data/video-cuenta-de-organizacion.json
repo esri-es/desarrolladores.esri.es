@@ -2,7 +2,12 @@
   "id": "dmkZ9Qy9JtQ",
   "slides": "http://esri-es.github.io/moocs/plataforma-arcgis/desarrolladores-web/introduccion/cuenta-de-organizacion/",
   "index": [
-    {"00:00": "name"},
-    {"01:12": "hola"}
+    {"00:00":	"Importancia de las cuentas"},
+    {"00:45":	"Tipos de cuentas de ArcGIS Online"},
+    {"01:13":	"Qué incluye la cuenta Trial"},
+    {"02:32":	"Expiración de cuentas"},
+    {"02:50":	"Coste de una cuenta"},
+    {"03:27":	"Cómo se consumen los créditos"},
+    {"04:25":	"Cómo adquirir una cuenta nueva"}
   ]
 }

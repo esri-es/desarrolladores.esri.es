@@ -4,24 +4,50 @@ Title: {{site.data.video-comunidad-arcgis.title}}<br>
 Video id: {{include.lesson}}
 -->
 
-<div class="grid-container leader-1" id="lesson">
-  <div class="column-24">
-    <div class="column-3">
-      <button id="prev">Anterior</button>
+<div class="grid-container leader-half" id="lesson">
+  <div class="column-22 pre-1 post-1">
+
+    <div class="column-15 first-column">
+      <h1 class="trailer-0">{{page.title}}</h1>
     </div>
-    <div class="column-18">
-      <h1 class="text-center">{{page.title}}</h1>
+    <div class="column-7 last-column">
+      <h2 class="padding-leader-half trailer-0">Índice</h2>
     </div>
-    <div class="column-3">
-      <button id="next" class="right">Siguiente</button>
-    </div>
-  </div>
-  <div class="column-24">
-    <div class="column-12">
+    <div class="column-15 first-column relative">
       <!--<iframe class="fill" src="https://www.youtube.com/embed/?enablejsapi=1" frameborder="0" allowfullscreen></iframe>-->
       <div data-video-id="{{site.data[include.lesson].id}}" id="player"></div>
+      <div class="btn-bar">
+        <div class="column-3">
+          <button id="prev">
+            <span class="icon-ui-left" aria-label="left"></span>Anterior
+          </button>
+        </div>
+        <div class="column-9 text-center">
+          <a href="https://github.com/esri-es/moocs/issues" class="btn btn-green tooltip tooltip-multiline" id="question" aria-label="Preguntas">
+            <span class="icon-ui-question" aria-label="question"></span>
+          </a>
+
+          <button class="tooltip btn btn-green tooltip-multiline" aria-label="Atrasar 15 segundos" id="rewind">
+            <span class="icon-ui-rotate flipH" aria-label="rotate"></span>
+          </button>
+
+          <button class="tooltip btn btn-green tooltip-multiline" aria-label="Adelantar 15 segundos" id="forward">
+            <span class="icon-ui-rotate" aria-label="rotate"></span>
+          </button>
+        </div>
+
+        <div class="column-3">
+          <button id="next" class="right">Siguiente
+            <span class="icon-ui-right" aria-label="right"></span>
+          </button>
+        </div>
+      </div>
+      <span class="icon-ui-question js-modal-toggle" data-modal="help" id="help" aria-label="question"></span>
+
+      <iframe src="{{site.data[include.lesson].slides}}" class="fill leader-1" frameborder="0"></iframe>
     </div>
-    <div class="column-12">
+
+    <div class="column-7">
       <table class="table-striped video-index">
         <thead>
           <tr>
@@ -39,10 +65,34 @@ Video id: {{include.lesson}}
           {% endfor %}
         </tbody>
     </table>
+
+      <h2 class="leader-1 trailer-0">Descripción</h2>
+      <p>Veremos a quién va dirigido este curso, requisitos recomendados, objetivos y metodología.</p>
     </div>
   </div>
-  <div class="column-12">
-    <iframe src="{{site.data[include.lesson].slides}}" class="fill" frameborder="0"></iframe>
+
+</div>
+
+<div class="js-modal modal-overlay modifier-class" data-modal="help">
+  <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+    <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+    <h3 class='trailer-half'>Ayuda</h3>
+
+    <p class="trailer-0">
+      Navega por las transparencias usando tu teclado,
+      <strong>haz clic sobre el fondo</strong> de las transparencias y después:
+    </p>
+    <ul>
+      <li>Para avanzar: <span class="icon-ui-right-arrow-circled"></span></li>
+      <li>Para retroceder: <span class="icon-ui-left-arrow-circled"></span></li>
+      <li>Para previsualizar: Pulsa escape ("Esc") y luego usa los cursores</li>
+      <li>Para entrar en detalle: <span class="icon-ui-down-arrow-circled"></span></li>
+      <li>Para salir del detalle: <span class="icon-ui-up-arrow-circled"></span></li>
+    </ul>
+
+    <div class="text-right">
+        <button class="btn js-modal-toggle btn-fill" data-click="enrollCourse">Cerrar</button>
+    </div>
   </div>
 </div>
 
@@ -66,8 +116,15 @@ function onYouTubeIframeAPIReady() {
     width: '100%',
     videoId: videoId,
     events: {
-      'onReady': onPlayerReady
+      'onReady': onPlayerReady//,
       //'onStateChange': onPlayerStateChange
+    }
+  });
+
+  player.addEventListener("onStateChange", function(state){
+    if(state.data === YT.PlayerState.ENDED){
+      // the video is end, do something here.
+      $("#next").click();
     }
   });
 

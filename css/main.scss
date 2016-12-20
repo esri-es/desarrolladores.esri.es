@@ -24,9 +24,13 @@ $font-path:       '{{ site.baseurl | prepend:site.url }}/node_modules/calcite-we
 .invisible{
   visibility: hidden;
 }
-.fill{
-  width: 100%;
+.fill {
+    width: 100%;
 }
+.relative {
+    position: relative
+}
+
 /**********************
         Header
 ***********************/
@@ -82,24 +86,71 @@ $font-path:       '{{ site.baseurl | prepend:site.url }}/node_modules/calcite-we
 }
 #enrollCourse{
   background-color: rgba(0,0,0,.5);
-  small{
-    font-size: .8rem;
-    font-weight: 300;
-  }
+
   &:hover {
       background-color: rgba(0,0,0,.8);
       color: white;
+  }
+  small{
+    font-size: .8rem;
+    font-weight: 300;
   }
 
   @include transition-prefixed(background .5s ease-out);
 }
 
-[data-modal="video"] .icon-ui-close::before{
-  padding-right: 0;
+[data-modal="video"] .icon-ui-close::before {
+    padding-right: 0
 }
-/**********************
-        LESSONS
-***********************/
-#lesson iframe{
-  height: 315px;
+.clickdform.mainDiv {
+    padding: 0
+}
+.alert {
+    max-width: 100%
+}
+#lesson iframe,
+table.video-index {
+    height: 400px
+}
+#lesson h1 {
+    font-size: 1.5rem
+}
+#lesson h2 {
+    font-size: 1.2rem
+}
+#help {
+    right: 15px;
+    position: absolute;
+    margin-top: 427px;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer
+}
+table.video-index tr:hover {
+    cursor: pointer
+}
+table.video-index th:first-child,
+table.video-index td:first-child {
+    width: 60px;
+    text-align: center
+}
+.icon-ui-rotate.flipH:before {
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+.btn-bar button span,
+.btn-bar a span {
+    font-size: 1rem
+}
+.btn-bar button span:before,
+.btn-bar a span:before {
+    padding-right: 0
+}
+.video-index tbody tr:hover {
+    text-decoration: underline
 }
