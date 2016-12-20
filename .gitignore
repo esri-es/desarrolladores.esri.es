@@ -2,3 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules
+startups/apply/config.php
+startups/apply/vendor
+composer.lock
+composer.phar

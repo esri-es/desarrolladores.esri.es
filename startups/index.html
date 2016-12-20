@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Programa de startups - Esri España</title>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!--[if IE]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="assets/calcite-web-1.0.0-beta.31/css/calcite-web.min.css">
+  <link rel="stylesheet" href="css/extensions.css">
+  <link rel="stylesheet" href="css/startups.css">
+  <script src="js/calcite-web.min.js"></script>
+
+  <script>
+  window.onload = function () {calcite.init();};
+  </script>
+  <style>
+  .mt-75{
+    margin-top: .75rem;
+  }
+  .w70, .w30{float: left;}
+  .w70{width: 70%;}
+  .w30{width: 30%;}
+  .card-content{
+    word-wrap: break-word;
+  }
+  .esri-logo{
+    background-image: url(images/logo-esri-espana.png)!important;
+    width: 100px;
+    height: auto;
+    max-width: none;
+    max-height: none;
+
+  }
+  .startups-banner p{
+    margin-bottom: 0;
+  }
+  #tos{
+    position: fixed;
+    bottom: 0;
+    max-width: 100%;
+    font-size: .8rem;
+    width: 100%;
+    opacity: 0;
+    display: none;
+  }
+  #tos .icon-ui-close{
+    cursor: pointer;
+  }
+
+  .copy-left { display: inline-block; text-align: right; margin: 0px; -moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: “FlipH”; }
+  @media screen and (max-width: 479px){
+    .block-group-4-up .block{
+      flex-basis: calc(50% - 1.5rem);
+      width: calc(50% - 1.5rem);
+    }
+
+    /* Fixes for iPhone 6 */
+    .startups-banner{
+      height: 300px;
+      min-height: 150px;
+      padding: 2rem 0;
+    }
+    h1{font-size: 1.5rem;}
+    .w70{
+      width: 100%;
+    }
+  }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="third-nav js-sticky" data-top="0">
+    <div class="grid-container">
+      <div class="column-24 phone-6">
+        <!-- desktop sized navigation -->
+        <div class="tablet-hide">
+          <!-- logo / home -->
+          <a href="#" class="top-nav-title">Programa de Startups</a>
+
+          <!-- user specific dropdowns -->
+          <nav class="top-nav-list right" role="navigation" aria-labelledby="usernav">
+            <a class="top-nav-link" href="#experiencias">Experiencias</a>
+            <a class="top-nav-link" href="#vision">Visión</a>
+            <a class="top-nav-link" href="#beneficios">Beneficios</a>
+            <a class="top-nav-link" href="#requisitos">Requisitos</a>
+            <a class="top-nav-link" href="#innovacion">Innovación</a>
+            <a class="top-nav-link" href="#equipo">Equipo</a>
+            <a class="btn btn-clear margin-left-1 mt-75" href="#unete">Únete</a>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <section class="startups-banner  phone-6">
+    <div class="grid-container">
+      <div class="column-12 pre-6 post-6 text-white text-center">
+        <div class="phone-hide padding-leader-3 padding-trailer-3">
+          <h1>Programa de Startups de Esri</h1>
+          <p class="padding-trailer-0">Un programa diseñado para ayudar a las startups <br>a aumentar sus probabilidades de éxito en cada etapa.</p>
+        </div>
+        <div class="phone-show">
+          <h1>Programa de Startups de Esri</h1>
+          <p class="padding-trailer-0">Un programa diseñado para ayudar a las startups a aumentar sus probabilidades de éxito en cada etapa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="grid-container">
+    <div>
+      <div class="column-20 pre-2 post-2 leader-2 trailer-2">
+        <div class="block-group block-group-3-up phone-hide">
+          <!-- Desktop version -->
+          <div class="card block">
+            <figure class="card-image-wrap">
+              <img class="card-image fade-in" src="images/idea.jpg" alt="Model business canvas" title="Author: Strategyzer">
+            </figure>
+            <div class="card-content">
+              <h4>Discovery</h4>
+              <p class="font-size--1 card-last">Si estás empezando, aún no tienes 100% claro el producto y necesitas el know-how de decenas de comerciales especializados en distintas industrias.</p>
+            </div>
+          </div>
+          <div class="card block">
+            <figure class="card-image-wrap">
+              <img class="card-image fade-in" src="images/lemonade.jpg" alt="Puesto de limonada" title="Author: Rebecca Schley">
+            </figure>
+            <div class="card-content">
+              <h4>Product / Market fit</h4>
+              <p class="font-size--1 card-last">Si ya tienes un tienes un producto o <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">MVP</a> que necesitas probar con clientes reales para demostrar que existe una demanda real en el mercado.</p>
+            </div>
+          </div>
+          <div class="card block">
+            <figure class="card-image-wrap">
+              <img class="card-image  fade-in" src="images/growth.jpg" alt="Cohete" title="Author: Gerd Altmann">
+            </figure>
+            <div class="card-content">
+              <h4>Scale / Growth</h4>
+              <p class="font-size--1 card-last">Si ya has validado tu producto y te interesa forjar alianzas para expandirte internacionalmente o llegar a miles de clientes en todo el mundo.</p>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- Phone version -->
+        <div class="phone-show">
+          <div class="card block trailer-1">
+            <figure class="card-image-wrap">
+              <img class="card-image fade-in" src="images/idea.jpg" alt="Model business canvas">
+            </figure>
+            <div class="card-content">
+              <h4><a href="#">Discovery</a></h4>
+              <p class="font-size--1 card-last">Si estás empezando, aún no tienes 100% claro el producto y necesitas el know-how de decenas de comerciales especializados en distintas ramas.</p>
+            </div>
+          </div>
+          <div class="card block trailer-1">
+            <figure class="card-image-wrap">
+              <img class="card-image fade-in" src="images/lemonade.jpg" alt="Puesto de limonada">
+            </figure>
+            <div class="card-content">
+              <h4><a href="#">Product/Market fit</a></h4>
+              <p class="font-size--1 card-last">Si ya tienes un tienes un producto o MVP y quieres validarlo con clientes reales para validar su encaje en el mercado.</p>
+            </div>
+          </div>
+          <div class="card block">
+            <figure class="card-image-wrap">
+              <img class="card-image  fade-in" src="images/growth.jpg" alt="Cohete">
+            </figure>
+            <div class="card-content">
+              <h4><a href="#">Scale / Growth</a></h4>
+              <p class="font-size--1 card-last">Si ya has validado tu producto y te interesa forjar alianzas para expandirte internacionalmente o llegar a miles de clientes en todo el mundo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="clearfix">
+      <h2 class="text-center trailer-1 leader-2" id="experiencias">Experiencias</h2>
+      <div class="carousel-panel is-active" data-toggle-set="carousel" data-toggle="foo" id="situm">
+
+        <div class="card card-wide trailer-1 column-12 pre-6">
+          <figure class="card-wide-image-wrap  padding-leader-1">
+            <img src="images/experiences/victor-alvarez-situm.png" alt="Fotografía de Victor Álvarez">
+          </figure>
+          <div class="card-content">
+            <p class="font-size--1 trailer-half">
+              La experiencia del equipo de Esri España junto con la suma de
+              ArcGIS y el servicio de posicionamiento en interiores de Situm ha
+              permitido trasladar la experiencia GIS hasta ahora reservada a
+              exteriores al interior de un aeropuerto o cualquier otro gran
+              espacio sin cobertura GPS.
+            </p>
+            <p class="font-size--1 trailer-half text-right"><a href="https://es.linkedin.com/in/victoras">Víctor Álvarez</a>, CEO en <a href="https://situm.es/">Situm</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="carousel-panel" data-toggle-set="carousel" data-toggle="baz" id="avuxi">
+        <div class="card card-wide trailer-1 column-12 pre-6">
+          <figure class="card-wide-image-wrap  padding-leader-1" >
+            <img src="images/experiences/roberto-abril-avuxi.png" alt="Fotografía de Roberto Abril">
+          </figure>
+          <div class="card-content">
+            <p class="font-size--1 trailer-half">
+              Este programa nos ha permitido utilizar las distintas herramientas ofrecidas por Esri,
+              descubrir el potencial de uso en nuestro sistema,
+               y ver como nuestra tecnología puede ayudar a sus clientes. Destacaría:
+            </p>
+            <ul>
+              <li>El acceso a sus herramientas, tanto online como offline.</li>
+              <li>La formación y webinars para sacar el mayor potencial posible a todas las herramientas.</li>
+              <li>Un equipo técnico accesible dispuesto a ayudar en todo momento.</li>
+            </ul>
+            <p class="font-size--1 trailer-half">
+              Desde AVUXI estamos analizando la mejor forma de ofrecer nuestro
+              <a href="http://www.avuxi.com/products/topplace">TopPlace</a> como:
+            </p>
+            <ol>
+              <li>Una capa de conocimiento sobre la popularidad de cada lugar clasificada por categorías como: comer, comprar, ocio nocturno y turismo.</li>
+              <li>Una herramienta para filtrar datos del cliente en base a la popularidad.</li>
+            </ol>
+            <p>
+              Al integrar nuestra información de popularidad en ArcGIS habilitamos a
+              cualquier usuario a combinar nuestros datos con los suyos propios o con
+              cualquiera de los disponibles en la plataforma.
+              Gracias a esto se pueden conocer los puntos y las áreas más populares de cualquier zona
+              del mundo de forma sencilla, lo que sin duda creemos que es de gran valor para empresas con necesidades globales.
+            </p>
+            <p class="font-size--1 trailer-half text-right"><a href="https://es.linkedin.com/in/robertoabril/es">Roberto Abril</a>, CTO en <a href="https://avuxi.com/">Avuxi</a></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-panel" data-toggle-set="carousel" data-toggle="baz" id="mapillary-st">
+        <div class="card card-wide trailer-1 column-12 pre-6">
+          <figure class="card-wide-image-wrap  padding-leader-1" >
+            <img src="images/experiences/janine-yoong-mapillary.png" alt="Fotografía de Janine Yoong">
+          </figure>
+          <div class="card-content">
+            <p class="font-size--1 trailer-half">
+              The Esri startup program has been key to our success at reaching
+              new customers.  Working with Esri has helped us learn about all
+              the different facets of GIS, get real-world feedback from
+              prospective customers, and develop geospatial products that resonate.
+              The people behind the program is what makes it so effective: the
+              program managers, technical staff, and marketing support never
+              fail to go above and beyond.  On many occasions, we felt like
+              Esri employees were working shoulder to shoulder with us as colleagues,
+              empathizing with our challenges as their own and finding creative ways
+              to address them. This spirit of true partnership can be seen across
+              Esri’s global network of distributors, making us feel as if we have
+              touchpoints all around the world.  We’re proud to be part of the
+              Esri startup program and hope to see like-minded entrepreneurs join us.
+            </p>
+            <p class="font-size--1 trailer-half text-right"><a href="https://es.linkedin.com/in/robertoabril/es">Janine Yoong</a>, Head of Business Development en <a href="https://avuxi.com/">Mapillary</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <nav class="carousel-nav">
+      <a href="#"
+      class="js-view-toggle icon-ui-left icon-ui-flush font-size-2"
+      data-toggle-set="carousel"
+      data-toggle='prev'></a>
+      <a href="#"
+      class="carousel-dot js-view-toggle is-active"
+      data-toggle-set="carousel"
+      data-toggle="foo" data-startup="situm"></a>
+      <a href="#"
+      class="carousel-dot js-view-toggle"
+      data-toggle-set="carousel"
+      data-toggle="baz" data-startup="avuxi"></a>
+      <a href="#"
+      class="carousel-dot  js-view-toggle"
+      data-toggle-set="carousel"
+      data-toggle="bar" data-startup="mapillary-st"></a>
+      <a href="#"
+      class="js-view-toggle icon-ui-right icon-ui-flush font-size-2"
+      data-toggle-set="carousel"
+      data-toggle='next'></a>
+    </nav>
+
+    <div>
+
+      <h2 class="text-center trailer-1 leader-2" id="vision">Visión</h2>
+      <p class="pre-4 post-4 text-center">
+        En Esri nos apasiona ver cómo la tecnología está revolucionando nuestro mundo,
+        ver cómo <strong>empresas que hace pocos años que no existían están mejorando la vida de
+        millones de personas</strong>. Como compañía que en su día tuvo que empezar desde
+        cero, sabemos que hay miles de <strong>proyectos interesantes que necesitan algo más
+        que una idea</strong> para alcanzar el éxito. Por esta razón
+        <a href="https://en.wikipedia.org/wiki/Jack_Dangermond">Jack Dangermond</a> decidió iniciar
+        este programa, para poder crear fuertes alianzas entre Esri
+        y jóvenes empresas que nos permitan ofrecer nuestros mejores
+        recursos para ayudarles a aumentar sus posibilidades de éxito.
+      </p>
+
+
+    </div>
+
+
+      <div>
+        <h2 class="text-center trailer-1 leader-2 clearfix" id="beneficios">Beneficios</h2>
+
+        <div class="modifier-class trailer-2 js-tab-group pre-2 post-2 padding-left-1 padding-right-1">
+          <nav class="tab-nav">
+            <a class="tab-title is-active js-tab">Software</a>
+            <a class="tab-title js-tab">Soporte y formación</a>
+            <a class="tab-title js-tab">Comunidad y co-marketing</a>
+          </nav>
+          <section class="tab-contents">
+            <article class="tab-section js-tab-section is-active clearfix">
+
+              <div class="w70 leader-1">
+                <ul>
+                  <li>Cuenta Organización <a href="http://www.esri.com/software/arcgis/arcgisonline">ArcGIS Online</a> nivel 1 (5 usuarios y 10.000 <a href="http://www.esri.com/software/arcgis/arcgisonline/credits">créditos</a>).</li>
+                  <li>Tres licencias de <a href="http://www.esri.com/software/arcgis/arcgisserver">ArcGIS for Server Enterprise Advanced</a> (4 core cada una).</li>
+                  <li>Tres licencias de <a href="http://www.esri.com/software/arcgis/arcgisserver/extensions/image-extension">ArcGIS for Image Extension</a> for Server Enterprise Advanced.</li>
+                  <li>Tres licencias de <a href="http://www.esri.com/software/cityengine">City Engine Advanced</a> single use.</li>
+                  <li>Tres suscripciones de <a href="http://www.esri.com/software/arcgis/edn/what-you-get">EDN advanced</a> con <a href="http://www.esri.com/software/arcgis/arcgis-for-desktop">ArcGIS for Desktop Advanced</a> y <a href="http://www.esri.com/software/arcgis-pro">ArcGIS Pro</a> single use.</li>
+                </ul>
+              </div>
+              <div class="w30">
+                <img src="images/icons/software.jpg" alt="Icono software" class="phone-hide">
+              </div>
+
+            </article>
+            <article class="tab-section js-tab-section clearfix">
+              <div class="w70">
+                <ul class="leader-1">
+                  <li>
+                    Mil quinientos dólares ($1500) para formación en el <a href="https://www.esri.com/training/unlimited-esri-training/">Virtual Campus</a>.
+                  </li>
+                  <li>
+                    Soporte técnico, <a href="#" class="js-modal-toggle" data-modal="soporte">más info</a>.
+                  </li>
+                  <li>
+                    Consultoría técnica para orientar la estrategia implementación
+                    con la plataforma ArcGIS en base a los objetivos de negocio.
+                  </li>
+                </ul>
+              </div>
+              <div class="w30">
+                <img src="images/icons/training.jpg" alt="Icono formación" class="phone-hide">
+              </div>
+            </article>
+            <article class="tab-section js-tab-section clearfix">
+              <div class="w70">
+                <ul>
+                  <li>2 entradas gratuitas para los eventos: <a href="http://www.esri.com/events/user-conference">Esri UC</a>, <a href="http://www.esri.com/events/devsummit">DevSummit</a>, <a href="http://www.esri.com/events/partner-conference">EPC</a> y <a href="http://www.esri.com/events/federal">Esri Federal GIS Conference</a>.</li>
+                  <li>Inclusión en la <a href="http://www.esri.com/partners">red de partners de Esri</a> como un “Emerging Business Partner“.</li>
+                  <li>Posibilidad de poder exhibir a bajo coste en la “<a href="https://blogs.esri.com/esri/arcgis/2016/06/10/startup-zone-at-2016-esri-uc/">Startup Zone</a>” en eventos de Esri.</li>
+                  <li>Poder trabajar en ofertas o colaborar con equipos sectoriales de Esri y de marketing.</li>
+                  <li>Publicar tu aplicación en el <a href="https://marketplace.arcgis.com/">marketplace de ArcGIS.</a></li>
+                </ul>
+              </div>
+              <div class="w30">
+                <img src="images/icons/opportunity.jpg" alt="Icono eventos" class="phone-hide">
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-center trailer-1 leader-2" id="requisitos">Requisitos</h2>
+        <div class="pre-6 post-4 padding-left-1 padding-right-1">
+          <p>Para poder acceder al programa tu startup debe:</p>
+          <ul class="list-plain">
+            <li class="icon-ui-green icon-ui-check-mark trailer-1">Tener menos 3 años de vida.</li>
+            <li class="icon-ui-green icon-ui-check-mark trailer-1">Generar menos de $1M en beneficios al unirse al programa.</li>
+            <li class="icon-ui-green icon-ui-check-mark trailer-1">Estar desarrollado un producto <a href="https://en.wikipedia.org/wiki/Software_as_a_service">Software As a Service</a>.</li>
+            <li class="icon-ui-green icon-ui-check-mark trailer-1">No formar ya parte del <a href="http://www.esri.com/partners">programa de partners</a> de Esri.</li>
+            <li class="icon-ui-green icon-ui-check-mark trailer-1">Estar alineado con los objetivos estratégicos del programa (<a href="https://geonet.esri.com/groups/esristartups/blog/2015/11/11/esri-startup-program-onboarding-orientation-platform-alliance">más información</a>).</li>
+            <li class="icon-ui-green icon-ui-check-mark trailer-1">Comprometerse a incluir los mapas base de Esri en la capa de presentación.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-center trailer-1 leader-2" id="innovacion">Innovación/Market fit</h2>
+        <div class="pre-4 post-4 padding-left-1 padding-right-1">
+          <p class="text-center">
+            Desde Esri estamos especialmente interesados en startups que quieran crear productos
+            innovadores que resuelvan problemas a empresas, organizaciones y usuarios finales en diferentes áreas como pueden ser:
+          </p>
+        </div>
+
+          <div class="modifier-class trailer-2 js-tab-group pre-4 post-4 padding-left-1 padding-right-1">
+            <nav class="tab-nav">
+              <a class="tab-title js-tab is-active ">Admon. Pública</a>
+              <a class="tab-title js-tab">Logística &amp; Transp.</a>
+              <a class="tab-title js-tab">Ingenierías &amp; Aguas</a>
+              <a class="tab-title js-tab">Electricidad &amp; Gas</a>
+              <a class="tab-title js-tab">Telecomunicaciones</a>
+              <a class="tab-title js-tab">Educación &amp; ONGs</a>
+            </nav>
+            <section class="tab-contents">
+              <article class="tab-section js-tab-section is-active clearfix">
+                <p class="leader-1 text-center"><strong>Administración pública</strong></p>
+                <ul class="leader-1">
+                  <li>Mejorar la comunicación entre administraciones y ciudadanos</li>
+                  <li>Mejorar la eficiencia en los flujos de trabajo de la administración (por ej: gestión de expedientes)</li>
+                  <li>Fomentar la reutilización, la difusión y el impacto del Open Data</li>
+                  <li>Detección de fraude (por ej: construcciones no autorizadas)</li>
+                </ul>
+              </article>
+
+              <article class="tab-section js-tab-section clearfix">
+                <p class="leader-1 text-center"><strong>Logística y transportes</strong></p>
+                <ul class="leader-1">
+                  <li>Resolver el <a href="https://en.wikipedia.org/wiki/Last_mile">problema de la última milla</a></li>
+                  <li>Optimizar la gestión portuaria: náutica deportiva, etc.</li>
+                </ul>
+              </article>
+
+              <article class="tab-section js-tab-section clearfix">
+                <p class="leader-1 text-center"><strong>Ingenierías y aguas</strong></p>
+                <ul class="leader-1">
+                  <li>Detección de fugas o fraude (p.e: <a href="http://www.abc.es/economia/abci-caza-ladron-agua-201610160214_noticia.html">ABC: Caza al ladrón de agua</a>).</li>
+                  <li>Detección, análisis y control de focos contaminantes/vertidos</li>
+                  <li>Mejorar la gestión de activos en interiores y/o en movimiento</li>
+                  <li>Mejorar la gestión de parcelas agrícolas (agricultura de precisión)</li>
+                  <li>etc.</li>
+                </ul>
+              </article>
+
+              <article class="tab-section js-tab-section clearfix">
+                <p class="leader-1 text-center"><strong>Electricidad y gas</strong></p>
+                <ul class="leader-1">
+                  <li>Automatizar la generación de informes para el regulador (<a href="https://www.cnmc.es/es-es/cnmc/sobrelacnmc.aspx">CNMC</a>) a partir de la información de activos de las redes georreferenciados.</li>
+                  <li>Control y detección de fugas y fraude (enganches ilegales, manipulación de contadores, etc.) a partir de la localización de contadores inteligentes (<a href="https://es.wikipedia.org/wiki/Lectura_de_medici%C3%B3n_autom%C3%A1tica">AMRs</a>).</li>
+                  <li>Aplicaciones diversas en movilidad para optimizar las órdenes de trabajo en campo (mantenimientos e inspecciones, visitas domiciliarias, comercial, etc).</li>
+                </ul>
+              </article>
+
+              <article class="tab-section js-tab-section clearfix">
+                <p class="leader-1 text-center"><strong>Telecomunicaciones</strong></p>
+                <ul class="leader-1">
+                  <li>Aplicaciones para optimizar la planificación de despliegue de las redes a partir de estudios de mercado, <a href="https://en.wikipedia.org/wiki/Business_intelligence">BI</a>, etc.</li>
+                  <li>Aplicaciones para optimizar la acción comercial y de marketing, optimizando zonas y carteras de clientes (residencial, empresas, etc.) y pudiendo hacer un seguimiento de la acción de los comerciales</li>
+                </ul>
+              </article>
+
+              <article class="tab-section js-tab-section clearfix">
+                <p class="leader-1 text-center"><strong>Educación y ONGs</strong></p>
+                <ul class="leader-1">
+                  <li>Smart campus: aplicar la smarticity al campus universitario (ej: <a href="http://smart.uji.es/">Smart Campus UJI</a>)</li>
+                  <li>Aplicaciones para mejorar la gestión y optimizar las actividades de una ONG (ej: <a href="https://youtu.be/nMXNoc2D4Bo?t=37m31s">ASFEMA</a>)</li>
+                  <li>Aplicaciones/juegos para facilitar el conocimiento gracias a la geolocalización (ej: <a href="http://pixelder.com/">Pixelder</a>)</li>
+                  <li>etc.</li>
+                </ul>
+              </article>
+            </section>
+          </div>
+        </div>
+
+      <!-- Start Equipo -->
+      <div class="clearfix">
+        <div class="column-18 pre-3 post-3">
+          <h2 class="text-center trailer-1 leader-2" id="equipo">Equipo</h2>
+          <p class="text-center">
+            Conoce a algunos de los responsables del programa de startups en los distintos países:
+          </p>
+
+          <div class="block-group block-group-4-up trailer-1">
+
+            <div class="card card-bar-blue block">
+              <div class="card-content">
+                <figure class="card-image-wrap">
+                  <img class="card-image" src="images/poc/esri-es.jpg" alt="Raúl Jiménez">
+                  <div class="card-image-caption tablet-hide phone-show">
+                    Raúl Jiménez - España
+                  </div>
+                </figure>
+                <p class="text-center leader-1">
+                  <a class="icon-social-linkedin" aria-label="Raul en Linkedin" href="https://es.linkedin.com/in/jimenezortegaraul/es"></a>
+                  <a class="icon-social-twitter" aria-label="Raul en Twitter" href="https://twitter.com/hhkaos"></a>
+                </p>
+              </div>
+            </div>
+
+            <div class="card card-bar-green block">
+              <div class="card-content">
+                <figure class="card-image-wrap">
+                  <img class="card-image" src="images/poc/esri-de.jpg" alt="Lars Schmitz">
+                  <div class="card-image-caption tablet-hide phone-show">
+                    Lars Schmitz - Alemania
+                  </div>
+                </figure>
+                <p class="text-center leader-1">
+                  <a class="icon-social-linkedin" aria-label="Lars en Linkedin" href="https://de.linkedin.com/in/larsschmitz/es"></a>
+                  <a class="icon-social-twitter" aria-label="Lars en Twitter" href="https://twitter.com/pilukinum"></a>
+                </p>
+              </div>
+            </div>
+
+
+            <div class="card card-bar-orange block">
+              <div class="card-content">
+                <figure class="card-image-wrap">
+                  <img class="card-image" src="images/poc/esri-fr.jpg" alt="David Jonglez">
+                  <div class="card-image-caption tablet-hide phone-show">
+                    David Jonglez - Francia
+                  </div>
+                </figure>
+                <p class="text-center leader-1">
+                  <a class="icon-social-linkedin" aria-label="David en Linkedin" href="https://fr.linkedin.com/in/davidjonglez/es"></a>
+                  <a class="icon-social-twitter" aria-label="David en Twitter" href="https://twitter.com/pilukinum"></a>
+                </p>
+              </div>
+            </div>
+
+            <div class="card card-bar-purple block">
+              <div class="card-content">
+                <figure class="card-image-wrap">
+                  <img class="card-image" src="images/poc/esri-uk.jpg" alt="Mark Wells">
+                  <div class="card-image-caption tablet-hide phone-show">
+                    Mark Wells - Reino Unido
+                  </div>
+                </figure>
+                <p class="text-center leader-1">
+                  <a class="icon-social-linkedin" aria-label="David en Linkedin" href="https://www.linkedin.com/in/mark-wells-28b3b340"></a>
+                  <a class="icon-social-twitter" aria-label="David en Twitter" href="https://twitter.com/markdwells"></a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--Second row-->
+          <div class="block-group block-group-4-up">
+
+            <div class="card card-bar-purple block">
+              <div class="card-content">
+                <figure class="card-image-wrap">
+                  <img class="card-image" src="images/poc/esri-ue.jpg" alt="Kurt Daradics">
+                  <div class="card-image-caption tablet-hide phone-show">
+                    Kurt Daradics - Estados Unidos
+                  </div>
+                </figure>
+                <p class="text-center leader-1">
+                  <a class="icon-social-linkedin" aria-label="Kurt en Linkedin" href="https://www.linkedin.com/in/kurtdaradics/es"></a>
+                  <a class="icon-social-twitter" aria-label="Kurt en Twitter" href="https://twitter.com/kurtyd"></a>
+                </p>
+              </div>
+            </div>
+
+            <div class="card card-bar-orange block">
+              <div class="card-content">
+                <figure class="card-image-wrap">
+                  <img class="card-image" src="images/poc/esri-ue-2.jpg" alt="Katie Decker">
+                  <div class="card-image-caption tablet-hide phone-show">
+                    Katie Decker - Estados Unidos
+                  </div>
+                </figure>
+                <p class="text-center leader-1">
+                  <a class="icon-social-linkedin" aria-label="Katie en Linkedin" href="https://www.linkedin.com/in/katdecker/es"></a>
+                  <a class="icon-social-twitter" aria-label="Katie en Twitter" href="https://twitter.com/globaldecker"></a>
+                </p>
+              </div>
+            </div>
+
+            <div class="card card-bar-green block">
+              <div class="card-content">
+                <figure class="card-image-wrap">
+                  <img class="card-image" src="images/poc/esri-sw.jpg" alt="Emanuelle Gennai">
+                  <div class="card-image-caption tablet-hide phone-show">
+                    Emanuele Gennai - Suiza
+                  </div>
+                </figure>
+                <p class="text-center leader-1">
+                  <a class="icon-social-linkedin" aria-label="Emanuele en Linkedin" href="https://ch.linkedin.com/in/emanuelegennai/es"></a>
+                  <a class="icon-social-twitter" aria-label="Emanuele en Twitter" href="https://twitter.com/egennai"></a>
+                </p>
+              </div>
+            </div>
+
+            <div class="card card-bar-blue block">
+              <div class="card-content">
+                <figure class="card-image-wrap">
+                  <img class="card-image" src="images/poc/esri-pt.jpg" alt="Rui Santos">
+                  <div class="card-image-caption tablet-hide phone-show">
+                    Rui Santos - Portugal
+                  </div>
+                </figure>
+                <p class="text-center leader-1">
+                  <a class="icon-social-linkedin" aria-label="Rui en Linkedin" href="https://pt.linkedin.com/in/ruimaiasantos/es"></a>
+                  <a class="icon-social-twitter" aria-label="Rui en Twitter" href="https://twitter.com/esrui"></a>
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <!-- end Equipo -->
+
+      <div class="clearfix">
+        <div class="column-24">
+          <h2 class="text-center trailer-1 leader-2" id="unete">Únete</h2>
+          <div class="pre-6 post-6 text-center">
+            <p>
+              Si crees que cumples los requisitos y quieres unirte esta solicitud.
+            </p>
+            <p>
+              <a href="/startups/apply/" class="btn btn-large btn-fill">Rellenar solicitud</a>
+            </p>
+          </div>
+
+          <h2 class="text-center trailer-1 leader-2">Historias de éxito, novedades, etc</h2>
+          <div class="pre-6 post-6 text-center">
+            <p>¿Quiere saber lo que enviamos?, échale un vistazo a las newsletters de <a href="http://go.esri.com/startups-jan2016">Enero de 2016</a> y <a href="http://go.esri.com/startups-april2016">Abril 2016</a>.
+            </p>
+            <p>
+              <a href="https://developers.arcgis.com/startups/newsletter" class="btn btn-clear btn-fill">Suscríbete a la newsletter</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="position: absolute; left:0; right:0">
+        <footer class="footer leader-3 link-dark-gray clearfix" role="contentinfo">
+          <div class="grid-container">
+            <nav class="column-6">
+              <h6>ArcGIS para desarrolladores</h6>
+              <ul class="list-plain">
+                <li><a href="http://developers.arcgis.com/">Presentación</a></li>
+                <li><a href="http://developers.arcgis.com/features">Características</a></li>
+                <li><a href="http://developers.arcgis.com/documentation">Documentación</a></li>
+                <li><a href="http://esri.github.io">Github</a></li>
+                <li><a href="http://desarrolladores.esri.es">Blog</a></li>
+              </ul>
+            </nav>
+
+            <nav class="column-6">
+              <h6>Plataforma ArcGIS</h6>
+              <ul class="list-plain">
+                <li><a href="http://arcgis.com">ArcGIS Online</a></li>
+                <li><a href="http://www.esri.com/en/software/arcgis-pro">ArcGIS Pro</a></li>
+                <li><a href="http://server.arcgis.com">ArcGIS for Server</a></li>
+                <li><a href="http://developers.arcgis.com">ArcGIS for Developers</a></li>
+                <li><a href="http://marketplace.arcgis.com">ArcGIS Marketplace</a></li>
+              </ul>
+            </nav>
+
+            <nav class="column-6">
+              <h6>Sobre Esri</h6>
+              <ul class="list-plain">
+                <li><a href="http://www.esri.es">Esri España</a></li>
+                <li><a href="http://www.conferencia.esri.es">Conferencia Esri España</a></li>
+                <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit - EEUU</a></li>
+                <li><a href="http://www.esri.com/events/devsummit-europe">Developer Summit - Berlín</a></li>
+                <li><a href="http://desarrolladores.esri.es/devsummit">Developer Summit - España</a></li>
+              </ul>
+            </nav>
+
+            <nav class="column-6">
+              <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+              <section class="footer-social-nav leader-1">
+                <a class="icon-social-twitter" aria-label="Esri on Twitter" href="https://twitter.com/esri_spain"></a>
+                <a class="icon-social-facebook" aria-label="Esri on Facebook" href="http://www.facebook.com/pages/Esri-Espa%C3%B1a-Geosistemas/189806744376056"></a>
+                <a class="icon-social-github" aria-label="Esri on GitHub" href="http://esri.github.io/"></a>
+                <a class="icon-social-contact" aria-label="Contact Esri" href="http://desarrolladores.esri.es/contacto"></a>
+              </section>
+            </nav>
+
+            <div class="column-24 leader-1">
+              <p><small><a href="https://en.wikipedia.org/wiki/Copyleft">Copyleft <span class="copy-left">©</span></a> 2016 Esri España | <a href="#" class="js-modal-toggle" data-modal="tos">Política de privacidad</a> | <a href="http://www.esri.es/es/aviso-legal/">Aviso legal</a></small></p>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- ****************** -->
+      <!-- End grid-container -->
+      <!-- ****************** -->
+    </div>
+
+
+    <div id="tos" class="padding-1 alert modifier-class is-active alert-yellow text-center">
+      Usamos "cookies" de terceros para recopilar
+      información que nos ayude a mejorar esta página, si cierras este
+      mensaje entenderemos que aceptas
+      <a href="#" class="js-modal-toggle" data-modal="tos">
+        nuestra política de privacidad
+      </a>
+      <span class="icon-ui-close" aria-label="close icon"></span>
+    </div>
+
+    <div class="js-modal modal-overlay modifier-class" data-modal="tos">
+      <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+        <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+        <h3 class='trailer-half'>Política de privacidad</h3>
+        <p>ESRI ESPAÑA SOLUCIONES GEOESPACIALES, S.L. (en adelante, Esri), con C.I.F. número: B-86900057, y domicilio social en C/ Emilio Muñoz 35/37 28037 (Madrid), debidamente inscrita en el Registro Mercantil de Madrid, titular del sitio web www.esri.es, expone en esta sección la Política de Privacidad corporativa sobre la información de carácter personal que el usuario puede facilitar cuando visite nuestro Web site. El objetivo de Esri es proteger la información en Internet, del mismo modo que es protegida por la empresa en los demás medios. La Política de Privacidad de Esri está presidida por el cumplimiento de la legislación vigente en materia de protección de datos de carácter personal y la Ley de Servicios de la Sociedad de la Información y Comercio Electrónico.</p>
+
+        <h4>1. Uso y tratamiento de datos de carácter personal</h4>
+        <p>
+          En cumplimiento de lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (en adelante, LOPD), Esri le informa de que los datos de carácter personal por Vd. proporcionados, así como aquellos datos a los que se pueda acceder como consecuencia de su navegación, serán incorporados a los ficheros automatizados de la entidad, pudiendo ejercitar su derecho de acceso, rectificación, cancelación y oposición al tratamiento de sus datos en los términos y condiciones previstos más abajo, en el apartado 2º. En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico, (en adelante LSSICE), Esri no enviará por correo electrónico comunicaciones publicitarias que no hayan sido autorizadas por los usuarios. Esri identificará mediante la palabra publicidad aquellos correos o Newsletters que contengan comunicaciones comerciales o promociones, exclusivamente.
+        </p>
+        <p>
+          En aquellos casos donde sea necesario cumplimentar un formulario (inscripción a seminarios o eventos), o remitir un correo electrónico (contacta: informacion@esri.es Empleo: rrhh@esri.es) y hacer click en el botón de enviar, su realización implicará necesariamente que haya sido informado (en virtud del artículo 5 LOPD) y, en su caso, ha otorgado el correspondiente consentimiento (a tenor del artículo 6 LOPD) al contenido de la presente política de privacidad.
+        </p>
+        <p>
+          Por otra parte, mediante el registro de los datos, el usuario otorga su consentimiento al tratamiento de los mismos con las finalidades en cada caso señaladas.
+        </p>
+        <p>
+          Así, siempre que ESri le solicite datos de carácter personal, incluirá el correspondiente clausulado legal y un enlace (link) vinculado a la presente Política con el propósito de hacerle partícipe de sus derechos y obligaciones establecidos en la LOPD y LSSIC.
+        </p>
+
+        <h4>2. Ejercicio de derechos: acceso, rectificación cancelación y oposición</h4>
+        <p>
+          Aquellas personas físicas que hayan facilitado sus datos a Esri podrán dirigirse a la misma, en su calidad de Responsable del fichero, con el fin de poder ejercitar gratuitamente sus derechos de acceso, rectificación, cancelación y oposición respecto de los datos incorporados en sus ficheros. Dado el carácter confidencial de la información, Vd. no podrá ejercitar sus derechos telefónicamente, debido a que este medio no permite acreditar su identidad como titular de los datos registrados. El interesado podrá ejercitar sus derechos mediante comunicación por escrito dirigida a Esri en la siguiente dirección: ATT: Responsable LOPD. C/ Emilio Muñoz 35  28037 (Madrid), con la siguiente referencia en su carta: Ejercicio de derechos (junto a su solicitud escrita y firmada, deberá acreditar su personalidad aportando fotocopia de su D.N.I.).
+        </p>
+
+        <h4>3. Menores de edad</h4>
+        <p>
+          La presente página web de Esri no se dirige a menores de edad. No obstante, Esri se exime de cualquier responsabilidad por el incumplimiento de este requisito.
+        </p>
+
+        <h4>4. Modificación de la política de privacidad</h4>
+        <p>
+          Esri se reserva el derecho a modificar su Política de Privacidad, de acuerdo a su propio criterio, o motivado por un cambio doctrinal de la Agencia Española de Protección de Datos, legislativo o jurisprudencial. Cualquier modificación de la Política de Privacidad será publicada al menos diez días antes de su efectiva aplicación. El uso del Web después de dichos cambios implicará la expresa aceptación de éstos.
+        </p>
+        <button class="btn btn-clear js-modal-toggle right">Cerrar</button>
+      </div>
+    </div>
+
+
+    <div class="js-modal modal-overlay modifier-class" data-modal="soporte">
+      <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+        <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+        <h3 class='trailer-half'>Soporte técnico</h3>
+        <p><strong>El Servicio de Soporte Técnico</strong> está especialmente diseñado para ayudarte en los errores que te surjan en el uso de los productos de la Plataforma ArcGIS.</p>
+        <p>Tendrás acceso a este servicio a través de nuestro <strong>Portal de Soporte</strong>: <a href="https://soporte.esri.es">https://soporte.esri.es</a>. Una vez tengas usuario y contraseña,
+          es el medio más rápido y eficiente para tramitar y responder a tus solicitudes. </p>
+
+          <p>Más información en <a href="http://bit.ly/1ZLDU1b">la web de Esri España.</a></p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: (target.offset().top-100)
+            }, 1000);
+            return false;
+          }
+        }
+      });
+
+      $(".carousel-nav .carousel-dot").click(function(e){
+        e.preventDefault();
+
+        $(".carousel-dot.is-active").removeClass("is-active");
+        $(this).addClass("is-active");
+        var active = $(".carousel-panel.is-active");
+        active.find(".card-wide").addClass("animate-fade-out");
+        active.removeClass("is-active");
+
+        var next = $(this).data("startup");
+        $("#"+next+" .card-wide").removeClass("animate-fade-out").addClass("animate-fade-in");
+        $("#"+next).addClass("is-active")
+      });
+
+      $(".carousel-nav [data-toggle='prev'], .carousel-nav [data-toggle='next']").click(function(e){
+        e.preventDefault();
+        s=$(".carousel-dot.is-active");
+        if($(this).data("toggle")==="next" && $(s).next().hasClass("carousel-dot")){
+          s.next().click();
+        }else if($(this).data("toggle")==="prev" && $(s).prev().hasClass("carousel-dot")){
+          s.prev().click();
+        }
+      });
+
+      if(!localStorage.acceptedTos){
+        $("#tos").show();
+        $("#tos").addClass("animate-fade-in")
+      }
+      $("#tos .icon-ui-close").click(function(){
+        $("#tos").hide();
+        localStorage.acceptedTos = true;
+      });
+    });
+    </script>
+  </body>
+  </html>
