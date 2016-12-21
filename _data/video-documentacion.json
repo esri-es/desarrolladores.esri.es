@@ -2,7 +2,11 @@
   "id": "npBdqzRB1MI",
   "slides": "http://esri-es.github.io/moocs/plataforma-arcgis/desarrolladores-web/introduccion/documentacion/",
   "index": [
-    {"00:00": "name"},
-    {"01:12": "hola"}
+    {"00:00": "Recursos oficiales"},
+    {"01:03": "Página de documentación"},
+    {"01:47": "Más recursos"},
+    {"03:55": "Docs de la API JS 3.x"},
+    {"04:57": "Docs de la API JS 4.x"},
+    {"06:57": "Otros recursos interesantes"}
   ]
 }

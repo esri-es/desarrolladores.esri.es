@@ -37,11 +37,12 @@
         {% for m in site.data.index-plataforma-arcgis.modulos %}
           <h2 class="side-nav-title">Módulo {{forloop.index}}</h2>
           {% for l in m %}
-            <a href="{{l[0]}}" class="side-nav-link
-            {% if page.url contains l[0] %}
-            is-active
-            {% endif %}
-            ">{{l[1]}}</a>
+            <a href="../{{l[0]}}"
+              class="side-nav-link
+              {% if page.url contains l[0] %}
+              is-active
+              {% endif %}"
+            >{{l[1]}}</a>
           {% endfor %}
         {% endfor %}
         <!--<a href="/" class="side-nav-link">Objetivos del curso</a>

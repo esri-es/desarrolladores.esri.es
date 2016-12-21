@@ -2,7 +2,15 @@
   "id": "ZdtYxdd7iVs",
   "slides": "http://esri-es.github.io/moocs/plataforma-arcgis/desarrolladores-web/introduccion/comunidad-arcgis/",
   "index": [
-    {"00:00": "name"},
-    {"01:12": "hola"}
+    {"00:00": "¿Dónde se encuentra la comunidad?"},
+    {"00:19": "GeoNet -> API JS"},
+    {"01:11": "Youtube"},
+    {"01:29": "Stackoverflow"},
+    {"01:50": "GIS Stack Exchange"},
+    {"02:15": "Github"},
+    {"02:40": "GeoNet -> WAB Custom Widgets"},
+    {"02:48": "GISDevs.slack.com"},
+    {"03:15": "Esri Github: Trends"},
+    {"04:15": "Otras referencias"}
   ]
 }
