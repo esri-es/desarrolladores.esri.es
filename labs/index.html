@@ -1,0 +1,294 @@
+---
+layout: default
+title: "ArcGIS DevLabs"
+permalink: /labs/
+---
+<link rel="stylesheet" href="{{ site.baseurl | prepend:site.url }}/css/labs.css">
+
+<style type="text/css">
+.data-lab::after,
+.design-lab::after,
+.develop-lab::after{
+  content: "Gestión de datos";
+  position: absolute;
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  background-color: #0079c1;
+  color: #fff;
+  font-size: .8rem;
+  top: -28px;
+  right: 0;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.design-lab::after{
+  content: "Diseño de mapas";
+  background-color: #5a9359;
+}
+
+.develop-lab::after{
+  content: "Desarrollo de apps";
+  background-color: #6c1a78;
+}
+
+.btn-pruple{
+  background-color: #6c1a78;
+  border-color: #6c1a78;
+}
+</style>
+
+<header class="sub-nav sub-nav-purple" role="banner">
+  <div class="grid-container">
+    <div class="column-18 center-column text-center first-column padding-trailer-2 padding-leader-2">
+      <h1 class="font-size-7 text-white">Bienvenido a ArcGIS DevLabs!.</h1>
+      <h4 class="font-size-3 text-white trailer-0" style="font-size: 1rem; line-height: 1.5rem;">
+        En esta página encontrarás una recopilación de "Codelabs", un listado de
+        tutoriales guiados de programación prácticos. Encontrarás algunos en español
+        y otros en inglés. Todos ellos te guiarán en el proceso para que adquieras
+        una nueva habilidad relacionada con ArcGIS y de esta manera mejores tus
+        conocimientos en la plataforma.
+      </h4>
+      <!--<h3 class="text-white">Data <span class="icon-ui-collapse icon-ui-flush font-size-2"></span> Design <span class="icon-ui-collapse icon-ui-flush font-size-2"></span> Develop</h3>-->
+    </div>
+  </div>
+</header>
+
+<div class="grid-container leader-2">
+  <div class="column-22 pre-1">
+    <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
+
+      <!-- lab card -->
+      <div class="card block trailer-2 data-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/data/import-data/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/develop_create-a-3d-map.png" alt="ArcGIS Online"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://docs.google.com/document/d/1w0DsGEtdTuYaeFNtU2qBcqlAj0Pf04kZm1pHtJtWKVQ/edit?usp=sharing">Buscar datos</a></h4>
+          <p class="font-size--1 card-last">Aprende a buscar y filtrar datos en ArcGIS Online.</p>
+          <a href="https://docs.google.com/document/d/1w0DsGEtdTuYaeFNtU2qBcqlAj0Pf04kZm1pHtJtWKVQ/edit?usp=sharing" class="btn btn-fill leader-1">Iniciar Lab (10 minutos)</a>
+        </div>
+      </div>
+
+      <!-- lab card -->
+      <div class="card block trailer-2 data-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/data/import-data/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/data_import-data.png" alt="Import data"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://developers.arcgis.com/labs/data/import-data/">Import data</a></h4>
+          <p class="font-size--1 card-last">Load your data into the cloud (xls, gpx, GeoJSON, shapefiles).</p>
+          <a href="https://developers.arcgis.com/labs/data/import-data/" class="btn btn-fill leader-1">Start Lab (10 minutes)</a>
+        </div>
+      </div>
+
+
+      <!-- lab card -->
+      <div class="card block trailer-2 data-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/data/create-a-new-dataset/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/data_create-a-new-dataset.png" alt="Create a new dataset"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://developers.arcgis.com/labs/data/create-a-new-dataset/">Create a new dataset</a></h4>
+          <p class="font-size--1 card-last">Define and populate datasets in the cloud for your apps.</p>
+          <a href="https://developers.arcgis.com/labs/data/create-a-new-dataset/" class="btn btn-fill leader-1">Start Lab (10 minutes)</a>
+        </div>
+      </div>
+
+
+      <!-- lab card -->
+      <div class="card block trailer-2 data-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/data/discover-data/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/data_discovering-data.png" alt="Discover data"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://developers.arcgis.com/labs/data/discover-data/">Discover data</a></h4>
+          <p class="font-size--1 card-last">Explore layers and maps from a variety of sources.</p>
+          <a href="https://developers.arcgis.com/labs/data/discover-data/" class="btn btn-fill leader-1">Start Lab (10 minutes)</a>
+        </div>
+      </div>
+
+
+      <!-- lab card -->
+      <div class="card block trailer-2 data-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/data/share-your-content/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/data_sharing-data.png" alt="Share your content"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://developers.arcgis.com/labs/data/share-your-content/">Share your content</a></h4>
+          <p class="font-size--1 card-last">Keep your layers private, or share them publicly.</p>
+          <a href="https://developers.arcgis.com/labs/data/share-your-content/" class="btn btn-fill leader-1">Start Lab (5 minutes)</a>
+        </div>
+      </div>
+
+
+      <!-- lab card -->
+      <div class="card block trailer-2 data-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/data/prepare-your-data-for-offline-use/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/data_preparing-data-for-offline-use.png" alt="Prepare your data for offline use"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://developers.arcgis.com/labs/data/prepare-your-data-for-offline-use/">Prepare your data for offline use</a></h4>
+          <p class="font-size--1 card-last">Create a mobile map package (MMPK) in ArcGIS Pro that can be used by mobile SDKs for offline data access.</p>
+          <a href="https://developers.arcgis.com/labs/data/prepare-your-data-for-offline-use/" class="btn btn-fill leader-1">Start Lab (15 minutes)</a>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <!-- lab card -->
+      <div class="card block trailer-2 design-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/design/create-a-web-map/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/design_create-a-web-map.png" alt="Create a web map (2D)"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://developers.arcgis.com/labs/design/create-a-web-map/">Create a web map (2D)</a></h4>
+          <p class="font-size--1 card-last">Use the Map Viewer to find layers and create a new web map.</p>
+          <a href="https://developers.arcgis.com/labs/design/create-a-web-map/" class="btn btn-fill btn-green leader-1">Start Lab (10 minutes)</a>
+        </div>
+      </div>
+
+
+      <!-- lab card -->
+      <div class="card block trailer-2 design-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/design/create-a-web-scene/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/design_create-a-web-scene.png" alt="Create a web scene (3D)"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://developers.arcgis.com/labs/design/create-a-web-scene/">Create a web scene (3D)</a></h4>
+          <p class="font-size--1 card-last">Use the Scene Viewer to find layers and create a new web scene.</p>
+          <a href="https://developers.arcgis.com/labs/design/create-a-web-scene/" class="btn btn-fill btn-green leader-1">Start Lab (10 minutes)</a>
+        </div>
+      </div>
+
+
+      <!-- lab card -->
+      <div class="card block trailer-2 design-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/design/style-a-web-map/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/design_styling-a-web-map.png" alt="Style a web map"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://developers.arcgis.com/labs/design/style-a-web-map/">Style a web map</a></h4>
+          <p class="font-size--1 card-last">Use the Map Viewer to style layers and create meaningful visualizations.</p>
+          <a href="https://developers.arcgis.com/labs/design/style-a-web-map/" class="btn btn-fill btn-green leader-1">Start Lab (10 minutes)</a>
+        </div>
+      </div>
+
+
+      <!-- lab card -->
+      <div class="card block trailer-2 design-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/design/configure-pop-ups/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/design_configuring-popups.png" alt="Configure pop-ups"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://developers.arcgis.com/labs/design/configure-pop-ups/">Configure pop-ups</a></h4>
+          <p class="font-size--1 card-last">Style pop-ups in the map viewer.</p>
+          <a href="https://developers.arcgis.com/labs/design/configure-pop-ups/" class="btn btn-fill btn-green leader-1">Start Lab (5 minutes)</a>
+        </div>
+      </div>
+
+
+      <!-- lab card -->
+      <div class="card block trailer-2 design-lab">
+        <figure class="card-image-wrap">
+          <a href="https://developers.arcgis.com/labs/design/style-your-layers-with-smart-mapping/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/design_styling-your-layers.png" alt="Style your layers with smart mapping"></a>
+        </figure>
+        <div class="card-content">
+          <h4><a href="https://developers.arcgis.com/labs/design/style-your-layers-with-smart-mapping/">Style your layers with smart mapping</a></h4>
+          <p class="font-size--1 card-last">Use smart mapping's well-designed style defaults and data-driven workflows to quickly make visually stunning, useful maps that tell important stories.</p>
+          <a href="https://developers.arcgis.com/labs/design/style-your-layers-with-smart-mapping/" class="btn btn-fill btn-green leader-1">Start Lab (10 minutes)</a>
+        </div>
+      </div>
+
+
+
+
+      <div class="card block trailer-2 develop-lab">
+       <figure class="card-image-wrap">
+         <a href="https://developers.arcgis.com/labs/develop/javascript/create-a-2d-map-with-a-layer/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/develop_create-a-2d-map.png" alt="Create a 2D map with a layer"></a>
+         <mark class="label font-size--3">JavaScript API</mark>
+       </figure>
+       <div class="card-content">
+         <h4><a href="https://developers.arcgis.com/labs/develop/javascript/create-a-2d-map-with-a-layer/">Create a 2D map with a layer</a></h4>
+         <p class="font-size--1 card-last">Build an app that displays a basemap and a feature layer.</p>
+         <a href="https://developers.arcgis.com/labs/develop/javascript/create-a-2d-map-with-a-layer/" class="btn btn-fill leader-1 btn-purple">Start Lab (10 minutes)</a>
+       </div>
+     </div>
+
+
+
+      <div class="card block trailer-2 develop-lab">
+       <figure class="card-image-wrap">
+         <a href="https://developers.arcgis.com/labs/develop/javascript/create-a-3d-scene-with-a-layer/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/develop_create-a-3d-map.png" alt="Create a 3D scene with a layer"></a>
+         <mark class="label font-size--3">JavaScript API</mark>
+       </figure>
+       <div class="card-content">
+         <h4><a href="https://developers.arcgis.com/labs/develop/javascript/create-a-3d-scene-with-a-layer/">Create a 3D scene with a layer</a></h4>
+         <p class="font-size--1 card-last">Build an app that displays a basemap and a feature layer in 3D</p>
+         <a href="https://developers.arcgis.com/labs/develop/javascript/create-a-3d-scene-with-a-layer/" class="btn btn-fill leader-1 btn-purple">Start Lab (10 minutes)</a>
+       </div>
+     </div>
+
+
+
+      <div class="card block trailer-2 develop-lab">
+       <figure class="card-image-wrap">
+         <a href="https://developers.arcgis.com/labs/develop/javascript/display-a-web-map/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/develop_display-a-web-map.png" alt="Display a web map"></a>
+         <mark class="label font-size--3">JavaScript API</mark>
+       </figure>
+       <div class="card-content">
+         <h4><a href="https://developers.arcgis.com/labs/develop/javascript/display-a-web-map/">Display a web map</a></h4>
+         <p class="font-size--1 card-last">Build an app that loads pre-configured content.</p>
+         <a href="https://developers.arcgis.com/labs/develop/javascript/display-a-web-map/" class="btn btn-fill leader-1 btn-purple">Start Lab (10 minutes)</a>
+       </div>
+     </div>
+
+
+
+      <div class="card block trailer-2 develop-lab">
+       <figure class="card-image-wrap">
+         <a href="https://developers.arcgis.com/labs/develop/javascript/create-graphics/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/develop_displaying-graphics-and-popups.png" alt="Create graphics"></a>
+         <mark class="label font-size--3">JavaScript API</mark>
+       </figure>
+       <div class="card-content">
+         <h4><a href="https://developers.arcgis.com/labs/develop/javascript/create-graphics/">Create graphics</a></h4>
+         <p class="font-size--1 card-last">Build an app that displays graphics from latitude and longitude coordinates.</p>
+         <a href="https://developers.arcgis.com/labs/develop/javascript/create-graphics/" class="btn btn-fill leader-1 btn-purple">Start Lab (10 minutes)</a>
+       </div>
+     </div>
+
+
+
+      <div class="card block trailer-2 develop-lab">
+       <figure class="card-image-wrap">
+         <a href="https://developers.arcgis.com/labs/develop/javascript/search-and-geocode/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/develop_geocode-and-search.png" alt="Search and geocode"></a>
+         <mark class="label font-size--3">JavaScript API</mark>
+       </figure>
+       <div class="card-content">
+         <h4><a href="https://developers.arcgis.com/labs/develop/javascript/search-and-geocode/">Search and geocode</a></h4>
+         <p class="font-size--1 card-last">Build an app that can search for places and find addresses.</p>
+         <a href="https://developers.arcgis.com/labs/develop/javascript/search-and-geocode/" class="btn btn-fill leader-1 btn-purple">Start Lab (10 minutes)</a>
+       </div>
+     </div>
+
+
+
+      <div class="card block trailer-2 develop-lab">
+       <figure class="card-image-wrap">
+         <a href="https://developers.arcgis.com/labs/develop/javascript/access-private-layers/"><img class="card-image" src="https://developers.arcgis.com/assets/img/labs/develop_accessing-private-layers.png" alt="Access private layers"></a>
+         <mark class="label font-size--3">JavaScript API</mark>
+       </figure>
+       <div class="card-content">
+         <h4><a href="https://developers.arcgis.com/labs/develop/javascript/access-private-layers/">Access private layers</a></h4>
+         <p class="font-size--1 card-last">Build an app that requires a login.</p>
+         <a href="https://developers.arcgis.com/labs/develop/javascript/access-private-layers/" class="btn btn-fill leader-1 btn-purple">Start Lab (20 minutes)</a>
+       </div>
+     </div>
+
+    </div>
+  </div>
+</div>
